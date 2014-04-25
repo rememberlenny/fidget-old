@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @scaffold.word %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @scaffold.number %>
+</p>
+
+<%= link_to 'Edit', edit_scaffold_path(@scaffold) %> |
+<%= link_to 'Back', scaffolds_path %>
