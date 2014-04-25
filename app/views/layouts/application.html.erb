@@ -11,8 +11,10 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
 
+  <body class="<%= body_css %>">
+
+    <%= render "partial/global/topnav" %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
