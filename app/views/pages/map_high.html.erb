@@ -1,8 +1,7 @@
-<div id='map' class='dark'></div>
-
-
 <% content_for :post_script do %>
-  <script>
-      var map = L.mapbox.map('map', 'lkbgift.i30f1c27').setView([37.9, -77], 5);
-  </script>
+  <%= render 'partial/script/trigger_mapbox' %>
 <% end %>
+
+<div class="large-12 container">
+  <div id='map' class='dark full-screen'></div>
+</div>
