@@ -1,2 +1,0 @@
-class MapHighController < ApplicationController
-end

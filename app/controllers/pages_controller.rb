@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def download
   end
+
+  def map_high
+  end
 end

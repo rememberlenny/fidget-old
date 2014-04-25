@@ -16,8 +16,11 @@
 
     <%= render "partial/global/topnav" %>
     <%= yield %>
-    <%= javascript_include_tag "application" %>
     <%= render "partial/global/footer" %>
+
+    <%= javascript_include_tag "application" %>
+
+    <%= yield :post_script %>
 
   </body>
 </html>

@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require foundation_and_overrides
-
+ *= require mapbox
  *= require_tree .
  */
 

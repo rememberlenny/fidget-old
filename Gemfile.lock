@@ -51,6 +51,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mapbox-rails (1.6.1.1)
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.9.2)
@@ -114,6 +115,7 @@ DEPENDENCIES
   foundation-rails
   jbuilder (~> 1.2)
   jquery-rails
+  mapbox-rails
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
   sdoc
