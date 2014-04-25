@@ -2,8 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.home .hero{
-  background-image: image-url("2300x600.png");
-  height: 500px;
-  background-position:center;
+.home{
+  .image-back{
+    height: 700px;
+    background-position:center;
+    background-size:cover;
+  }
+  .hero-default{
+    background-image: image-url("2300x600.png");
+  }
+  .hero-visualize{
+    background-image: image-url("map.jpg");
+    background-color: black;
+    h1{
+      color: white;
+    }
+  }
+  .hero-phone{
+    background-image: image-url("iphone-mask.png");
+  }
 }
