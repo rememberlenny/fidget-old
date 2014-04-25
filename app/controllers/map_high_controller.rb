@@ -1,0 +1,2 @@
+class MapHighController < ApplicationController
+end
