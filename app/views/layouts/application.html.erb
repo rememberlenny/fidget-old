@@ -14,9 +14,28 @@
 
   <body class="<%= body_css %>">
 
-    <%= render "partial/global/topnav" %>
-    <%= yield %>
-    <%= render "partial/global/footer" %>
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <a class="left-off-canvas-toggle" href="#" >Menu</a>
+        <!-- Off Canvas Menu -->
+        <aside class="left-off-canvas-menu">
+            <!-- whatever you want goes here -->
+            <ul>
+              <li><a href="#">Item 1</a></li>
+            </ul>
+        </aside>
+
+
+
+        <%= yield %>
+
+        <%= render "partial/global/footer" %>
+
+      <!-- close the off-canvas menu -->
+      <a class="exit-off-canvas"></a>
+      </div>
+    </div>
+
 
     <%= javascript_include_tag "application" %>
 
