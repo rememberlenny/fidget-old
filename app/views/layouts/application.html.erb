@@ -16,16 +16,11 @@
 
     <div class="off-canvas-wrap" data-offcanvas>
       <div class="inner-wrap">
-        <a class="left-off-canvas-toggle" href="#" >Menu</a>
-        <!-- Off Canvas Menu -->
-        <aside class="left-off-canvas-menu">
-            <!-- whatever you want goes here -->
-            <ul>
-              <li><a href="#">Item 1</a></li>
-            </ul>
-        </aside>
 
+        <%= render "partial/global/topnav" %>
 
+        <%= render "partial/global/off_canvas_left" %>
+        <%= render "partial/global/off_canvas_right" %>
 
         <%= yield %>
 
