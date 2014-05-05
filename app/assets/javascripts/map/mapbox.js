@@ -12,14 +12,36 @@ mapApp = {
   },
   registerGeoJSON: function(){
     var self = this;
-    this.markers = []
+    this._markers = [];
+    this.markers  = [];
     mapApp.map.eachLayer(
-      function(marker){ this.markers.push(marker) }
+      function(marker){ self._markers.push(marker) }
     );
-    for(i=0; i< this.markers.length; i++ ){
-      if( this.markers[i]._geojson !== undefined ){
-        if( this.markers[i]._geojson.geometry.type === "Point" ){
-          console.log( this.markers[i] );
+    this.saveMarkers();
+  },
+  saveMarkers: function(){
+    // Called by this.registerGeoJSON()
+    var self = this;
+    for( var i = 0; i< self._markers.length; i++ ){
+      self.processMarkerLoop(i);
+    }
+  },
+  processMarkerLoop: function(i){
+    // Called by this.saveMarkers()
+    var self = this;
+    var hasGeoJSONprop = (self._markers[i]._geojson !== undefined);
+    // Defining variables inside if statements is bad practice
+    // Nested code also sucks to read
+    if( hasGeoJSONprop ){
+      var hasGeometryProp = (self._markers[i]._geojson.geometry !== undefined);
+      if( hasGeometryProp ){
+        var hasPoint = (self._markers[i]._geojson.geometry.type !== undefined );
+        if( hasPoint ){
+          var isPoint = (self._markers[i]._geojson.geometry.type === "Point" );
+          if( isPoint ){
+            console.log( self._markers[i] );
+            self.markers.push(self._markers[i]);
+          }
         }
       }
     }
