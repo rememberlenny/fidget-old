@@ -14,7 +14,10 @@
 //= require jquery_ujs
 //= require foundation
 //= require mapbox.js
+//= require handlebars
+//= require handlebars.runtime
 //= require turbolinks
+//= require_tree ./templates
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

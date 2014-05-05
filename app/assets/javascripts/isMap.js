@@ -95,3 +95,4 @@ mapApp = {
 
 mapApp.blastOff();
 console.log('mapApp.blastOff');
+
