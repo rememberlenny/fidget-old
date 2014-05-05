@@ -21,7 +21,7 @@ firebaseAppLocationInput = {
         var name = $('#nameInput').val();
         var long = $('#longitudeInput').val();
         var lati = $('#latitudeInput').val();
-        self.myDataRef.push({location:{name: name, longitude: long, latitude: lati}});
+        self.myDataRef.push({name: name, longitude: long, latitude: lati});
         $('#nameInput, #longitudeInput, #latitudeInput').val('');
       }
     });
