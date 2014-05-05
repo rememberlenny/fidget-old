@@ -18,16 +18,15 @@ firebaseAppLocationInput = {
     var self = this;
     $('#latitudeInput').keypress(function (e) {
       if (e.keyCode == 13) {
-        var name = $('#nameInput').val();
-        var lng = $('#longitudeInput').val();
-        var lat = $('#latitudeInput').val();
+        var name  = $('#nameInput').val();
+        var lng   = $('#longitudeInput').val();
+        var lat   = $('#latitudeInput').val();
         self.submitToFirebase(name, lng, lat)
         $('#nameInput, #longitudeInput, #latitudeInput').val('');
       }
     });
   },
   submitToFirebase: function(name, lng, lat){
-
     this.myDataRef.push({name: name, longitude: lng, latitude: lat});
   }
 }
