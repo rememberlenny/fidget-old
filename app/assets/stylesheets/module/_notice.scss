@@ -1,0 +1,17 @@
+@import 'base/mixin';
+
+.panel.notice{
+  position: absolute;
+  top: 0px;
+  z-index: 4;
+  width: 400px;
+  top: -600px;
+  opacity: 0;
+  @include transition(top, 500ms, ease-in, 0s);
+  &.visible{
+    top: 60px;
+    opacity: 1;
+    left: 50%;
+    margin-left: -200px;
+  }
+}

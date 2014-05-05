@@ -22,9 +22,13 @@
         <%= render "partial/global/off_canvas_left" %>
         <%= render "partial/global/off_canvas_right" %>
 
-        <%= yield %>
+        <%= render "partial/global/notification_window" %>
 
-        <%= render "partial/global/footer" %>
+        <div class="large-12 container">
+          <%= render "partial/global/footer" %>
+          <%= yield %>
+        </div>
+
 
       <!-- close the off-canvas menu -->
       <a class="exit-off-canvas"></a>
