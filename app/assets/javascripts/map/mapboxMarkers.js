@@ -14,7 +14,5 @@ function MapboxMarker (lng, lat, title, desc){
       "marker-symbol": "harbor"
     }
   };
-  console.log(geoData);
-  console.log(map);
   L.mapbox.featureLayer(geoData).addTo(mapApp.map);
 }
