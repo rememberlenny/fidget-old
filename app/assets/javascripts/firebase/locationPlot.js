@@ -16,6 +16,7 @@ firebaseAppLocationPlot = {
   },
   displayMarker: function(name, longitude, latitude){
     console.log("#############");
+    console.log("***FIREBASE**");
     console.log("*************");
     console.log("name = " + name);
     console.log("longitude = " + longitude);
