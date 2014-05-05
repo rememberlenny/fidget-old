@@ -33,13 +33,14 @@ mapApp = {
     // Defining variables inside if statements is bad practice
     // Nested code also sucks to read
     if( hasGeoJSONprop ){
-      var hasGeometryProp = (self._markers[i]._geojson.geometry !== undefined);
+      var geometryProp = self._markers[i]._geojson.geometry;
+      var hasGeometryProp = (geometryProp !== undefined);
       if( hasGeometryProp ){
-        var hasPoint = (self._markers[i]._geojson.geometry.type !== undefined );
+        var hasPoint = (geometryProp.type !== undefined );
         if( hasPoint ){
-          var isPoint = (self._markers[i]._geojson.geometry.type === "Point" );
+          var isPoint = (geometryProp.type === "Point" );
           if( isPoint ){
-            console.log( self._markers[i] );
+            if(location.search === "?test"){ console.log( self._markers[i] ); }
             self.markers.push(self._markers[i]);
           }
         }
@@ -54,7 +55,7 @@ mapApp = {
   },
   mouseActions: function(){
       this.map.on('mousemove click', function(e) {
-          console.log( e.containerPoint.toString() + ', ' + e.latlng.toString());
+          if(location.search === "?test"){ console.log( e.containerPoint.toString() + ', ' + e.latlng.toString()); }
       });
   },
 }

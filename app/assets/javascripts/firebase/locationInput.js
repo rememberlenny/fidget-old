@@ -6,15 +6,15 @@ firebaseAppLocationInput = {
     this.events();
   },
   setupFirebase: function(){
-    console.log('Firebase setupFirebase initailized');
+    if(location.search === "?test"){ console.log('Firebase setupFirebase initailized'); }
     this.myDataRef = new Firebase('https://glowing-fire-4514.firebaseio.com/');
   },
   events: function(){
-    console.log('Firebase events initialized');
+    if(location.search === "?test"){ console.log('Firebase events initialized'); }
     this.submitToFirebase();
   },
   submitToFirebase: function(){
-    console.log('Firebase submitToFirebase initialized');
+    if(location.search === "?test"){ console.log('Firebase submitToFirebase initialized'); }
     var self = this;
     $('#latitudeInput').keypress(function (e) {
       if (e.keyCode == 13) {

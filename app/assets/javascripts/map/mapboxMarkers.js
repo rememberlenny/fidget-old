@@ -15,4 +15,5 @@ function MapboxMarker (lng, lat, title, desc){
     }
   };
   L.mapbox.featureLayer(geoData).addTo(mapApp.map);
+  var myLayer = L.mapbox.featureLayer().addTo(map);
 }

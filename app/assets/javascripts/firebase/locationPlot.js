@@ -15,12 +15,12 @@ firebaseAppLocationPlot = {
     });
   },
   displayMarker: function(name, longitude, latitude){
-    console.log("#############");
-    console.log("***FIREBASE**");
-    console.log("*************");
-    console.log("name = " + name);
-    console.log("longitude = " + longitude);
-    console.log("latitude = " + latitude);
+    if(location.search === "?test"){ console.log("#############"); }
+    if(location.search === "?test"){ console.log("***FIREBASE**"); }
+    if(location.search === "?test"){ console.log("*************"); }
+    if(location.search === "?test"){ console.log("name = " + name); }
+    if(location.search === "?test"){ console.log("longitude = " + longitude); }
+    if(location.search === "?test"){ console.log("latitude = " + latitude); }
   },
 }
 

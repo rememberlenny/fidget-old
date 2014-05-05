@@ -24,7 +24,10 @@
         <%= render "partial/global/off_canvas_right" %>
 
         <%= render "partial/global/notification_window" %>
-        <%= render "partial/global/locationInput" %>
+
+        <% if params[:test] == 'true' %>
+        <%=  render "partial/global/locationInput" %>
+        <% end %>
 
         <div class="large-12 container">
           <%= render "partial/global/footer" %>
