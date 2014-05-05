@@ -1,9 +1,10 @@
 @import 'base/mixin';
+@import 'base/variables';
 
 .panel.notice{
   position: absolute;
   top: 0px;
-  z-index: 4;
+  z-index: $module-zindex;
   width: 400px;
   top: -600px;
   opacity: 0;

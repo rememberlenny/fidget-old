@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+    <script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
   </head>
 
 
@@ -23,6 +24,7 @@
         <%= render "partial/global/off_canvas_right" %>
 
         <%= render "partial/global/notification_window" %>
+        <%= render "partial/global/locationInput" %>
 
         <div class="large-12 container">
           <%= render "partial/global/footer" %>
