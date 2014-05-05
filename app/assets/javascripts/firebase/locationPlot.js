@@ -1,6 +1,7 @@
 var firebaseAppLocationPlot = {};
 
 firebaseAppLocationPlot = {
+  snapshot: [],
   initialize: function(){
     this.events();
   },
@@ -11,6 +12,7 @@ firebaseAppLocationPlot = {
     var self = this;
     firebaseAppLocationInput.myDataRef.on('child_added', function(snapshot) {
       var location = snapshot.val();
+      self.snapshot.push(location);
       self.displayMarker(location.name, location.longitude, location.latitude);
     });
   },
