@@ -6,26 +6,30 @@ firebaseAppLocationInput = {
     this.events();
   },
   setupFirebase: function(){
-    if(location.search === "?test"){ console.log('Firebase setupFirebase initailized'); }
+    if(location.search === "?test=true"){ console.log('Firebase setupFirebase initailized'); }
     this.myDataRef = new Firebase('https://glowing-fire-4514.firebaseio.com/');
   },
   events: function(){
-    if(location.search === "?test"){ console.log('Firebase events initialized'); }
-    this.submitToFirebase();
+    if(location.search === "?test=true"){ console.log('Firebase events initialized'); }
+    this.submitToFirebaseEvent();
   },
-  submitToFirebase: function(){
-    if(location.search === "?test"){ console.log('Firebase submitToFirebase initialized'); }
+  submitToFirebaseEvent: function(){
+    if(location.search === "?test=true"){ console.log('Firebase submitToFirebase initialized'); }
     var self = this;
     $('#latitudeInput').keypress(function (e) {
       if (e.keyCode == 13) {
         var name = $('#nameInput').val();
-        var long = $('#longitudeInput').val();
-        var lati = $('#latitudeInput').val();
-        self.myDataRef.push({name: name, longitude: long, latitude: lati});
+        var lng = $('#longitudeInput').val();
+        var lat = $('#latitudeInput').val();
+        self.submitToFirebase(name, lng, lat)
         $('#nameInput, #longitudeInput, #latitudeInput').val('');
       }
     });
   },
+  submitToFirebase: function(name, lng, lat){
+
+    this.myDataRef.push({name: name, longitude: lng, latitude: lat});
+  }
 }
 
 firebaseAppLocationInput.initialize();

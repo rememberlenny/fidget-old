@@ -20,20 +20,20 @@ mapApp = {
   },
   doTimerActions: function(){
     if(this.isResized){
-      if(location.search === "?test"){ console.log('Running innerWrapWindowDefine.'); }
+      if(location.search === "?test=true"){ console.log('Running innerWrapWindowDefine.'); }
       this.innerWrapWindowDefine();
     }
   },
   setEvents: function(){
     var self = this;
-    if(location.search === "?test"){ console.log('Events initialized.'); }
+    if(location.search === "?test=true"){ console.log('Events initialized.'); }
     $(window).on('resize', function(){
       self.doOnResize()
     });
   },
   doOnResize: function(){
     this.isResized = true;
-    if(location.search === "?test"){ console.log('isResized = ' + this.isResized); }
+    if(location.search === "?test=true"){ console.log('isResized = ' + this.isResized); }
   },
   checkWindow: function(){
     if(this.isResized === true){
@@ -48,14 +48,14 @@ mapApp = {
       this.innerWrapHeight = $('.inner-wrap').height();
       this.windowHeight = $(window).height();
       this.isSameWindowAndInner = (this.windowHeight === this.innerWrapHeight);
-      if(location.search === "?test"){ console.log('this.innerWrapHeight = ' + this.innerWrapHeight); }
-      if(location.search === "?test"){ console.log('this.windowHeight = ' + this.windowHeight); }
-      if(location.search === "?test"){ console.log('this.isSameWindowAndInner = ' + this.isSameWindowAndInner); }
-      if(location.search === "?test"){ console.log('Window checked.'); }
+      if(location.search === "?test=true"){ console.log('this.innerWrapHeight = ' + this.innerWrapHeight); }
+      if(location.search === "?test=true"){ console.log('this.windowHeight = ' + this.windowHeight); }
+      if(location.search === "?test=true"){ console.log('this.isSameWindowAndInner = ' + this.isSameWindowAndInner); }
+      if(location.search === "?test=true"){ console.log('Window checked.'); }
 
       this.timerChecker();
     } else {
-      if(location.search === "?test"){ console.log('Checking window again.'); }
+      if(location.search === "?test=true"){ console.log('Checking window again.'); }
       setTimeout( function(){
         self.checkWindow()
       }, 250);
@@ -63,8 +63,8 @@ mapApp = {
   },
   timerChecker: function(){
     var self = this;
-    if(location.search === "?test"){ console.log('timerChecker running.'); }
-    if(location.search === "?test"){ console.log('this.isResized = ' + this.isResized); }
+    if(location.search === "?test=true"){ console.log('timerChecker running.'); }
+    if(location.search === "?test=true"){ console.log('this.isResized = ' + this.isResized); }
     setTimeout( function(){
       self.runTimerCheck()
     }, 250);
@@ -94,5 +94,5 @@ mapApp = {
 }
 
 mapApp.blastOff();
-if(location.search === "?test"){ console.log('mapApp.blastOff'); }
+if(location.search === "?test=true"){ console.log('mapApp.blastOff'); }
 

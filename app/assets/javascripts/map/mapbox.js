@@ -40,7 +40,7 @@ mapApp = {
         if( hasPoint ){
           var isPoint = (geometryProp.type === "Point" );
           if( isPoint ){
-            if(location.search === "?test"){ console.log( self._markers[i] ); }
+            if(location.search === "?test=true"){ console.log( self._markers[i] ); }
             self.markers.push(self._markers[i]);
           }
         }
@@ -55,7 +55,7 @@ mapApp = {
   },
   mouseActions: function(){
       this.map.on('mousemove click', function(e) {
-          if(location.search === "?test"){ console.log( e.containerPoint.toString() + ', ' + e.latlng.toString()); }
+          if(location.search === "?test=true"){ console.log( e.containerPoint.toString() + ', ' + e.latlng.toString()); }
       });
   },
 }
