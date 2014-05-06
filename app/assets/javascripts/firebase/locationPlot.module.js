@@ -18,6 +18,7 @@ LocationPlot.prototype.checkForChanges = function(){
     var lng = location.longitude;
     var lat = location.latitude;
     mapApp.createMarker(lng, lat, name, '', true);
+    mapApp.countMarkers();
   });
 }
 LocationPlot.prototype.displayMarker = function(name, longitude, latitude){

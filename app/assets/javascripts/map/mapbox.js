@@ -51,8 +51,25 @@ MapApp.prototype.loadMap = function(){
 
 }
 
-MapApp.prototype.clearUnsavedMarkers = function(){
+MapApp.prototype.clearMarkersArray = function(){
+  this._markers = [];
+  this.markers  = [];
+}
 
+MapApp.prototype.deleteUnsyncedMarkers = function(){
+  var self = this;
+  for(var i = 0; i < self.markers.length; i++){
+    var currentMarker = self.markers[i];
+    if( currentMarker._geojson.properties.draft === true ){
+      mapApp.map.removeLayer(mapApp.markers[i]);
+    }
+  }
+}
+
+MapApp.prototype.clearUnsavedMarkers = function(){
+  this.deleteUnsyncedMarkers();
+  this.clearMarkersArray();
+  this.countMarkers();
 }
 
 MapApp.prototype.mouseActions = function(){
@@ -61,13 +78,13 @@ MapApp.prototype.mouseActions = function(){
     if(location.search === "?test=true"){ console.log( e.containerPoint.toString() + ', ' + e.latlng.toString()); }
   });
   this.map.on('click', function(e) {
-    self.clearUnsavedMarkers();
 
     if(location.search === "?test=true"){ $('#longitudeInput').val(e.latlng.lng); }
     if(location.search === "?test=true"){ $('#latitudeInput').val(e.latlng.lat); }
 
     // Creates map marker on click
     self.createMarker(e.latlng.lng, e.latlng.lat, '', '', false);
+    self.clearUnsavedMarkers();
   });
 }
 
@@ -104,6 +121,7 @@ MapApp.prototype.MapboxMarker = function (lng, lat, title, desc, saved){
   }
 
   if(saved === false){
+    geoData.properties['draft'] = true;
     geoData.properties['marker-color'] = "#3a4353";
     geoData.properties['marker-size'] = "small";
   }
