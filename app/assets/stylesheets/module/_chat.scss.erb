@@ -1,0 +1,34 @@
+@import 'base/mixin';
+
+.right-off-canvas-menu{
+  -webkit-transition: right 200ms;
+  -moz-transition: right 200ms;
+  -o-transition: right 200ms;
+  transition: right 200ms;
+  right: 0px;
+  top: 0px;
+  #right-off-header{
+    label{
+      height: 46px;
+      line-height: 35px;
+      font-size: 18px;
+    }
+  }
+}
+section.right-small{
+  @include transition(opacity, 500ms, ease-in, 0s);
+}
+@media screen and (min-width: 900px) {
+  section.right-small{
+    opacity: 0;
+  }
+  .right-off-canvas-menu{
+    -webkit-transition: right 200ms;
+    -moz-transition: right 200ms;
+    -o-transition: right 200ms;
+    transition: right 200ms;
+    position: fixed;
+    z-index: 4;
+    right: 250px;
+  }
+}
