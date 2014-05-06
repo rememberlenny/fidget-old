@@ -8,15 +8,6 @@ mapApp = {
   initialize: function(){
     this.loadMap();
     this.mouseActions();
-    this.registerGeoJSON();
-  },
-  registerGeoJSON: function(){
-    for(var i = 0; i < firebaseAppLocationPlot.snapshot.length; i++){
-      var lat  = firebaseAppLocationPlot.snapshot[0]['latitude']
-      var lng  = firebaseAppLocationPlot.snapshot[0]['longitude']
-      var name = firebaseAppLocationPlot.snapshot[0]['name']
-
-    }
   },
   countMarkers: function(){
     var self = this;

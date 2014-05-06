@@ -21,3 +21,6 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+firebaseAppLocationPlot.initialize();
+firebaseAppLocationInput.initialize();
