@@ -1,5 +1,5 @@
 var LocationPlot = function(){
-  snapshot: []
+  this.snapshots = [];
 }
 LocationPlot.prototype.initialize = function(){
   this.events();
@@ -11,11 +11,12 @@ LocationPlot.prototype.checkForChanges = function(){
   var self = this;
   firebaseAppLocationInput.myDataRef.on('child_added', function(snapshot) {
     var location = snapshot.val();
-    self.snapshot.push(location);
+    console.log(self.snapshots);
+    self.snapshots.push(location);
     self.displayMarker(location.name, location.longitude, location.latitude);
     var name = location.name;
     var lng = location.longitude;
-    var tag = location.latitude;
+    var lat = location.latitude;
     mapApp.createMarker(lng, lat, name);
   });
 }

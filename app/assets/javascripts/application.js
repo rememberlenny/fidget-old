@@ -17,13 +17,19 @@
 //= require handlebars
 //= require handlebars.runtime
 //= require turbolinks
+//= require_tree ./map
+//= require_tree ./firebase
 //= require_tree ./templates
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
 
+
+var mapApp = new MapApp;
 var firebaseAppLocationPlot = new LocationPlot;
 var firebaseAppLocationInput = new LocationInput;
 
+mapApp.initialize();
 firebaseAppLocationInput.initialize();
 firebaseAppLocationPlot.initialize(); //Dependent on firebaseAppLocationInput
+
