@@ -1,13 +1,13 @@
-var firebaseAppLocationPlot = function(){
+var LocationPlot = function(){
   snapshot: []
 }
-firebaseAppLocationPlot.prototype.initialize = function(){
+LocationPlot.prototype.initialize = function(){
   this.events();
 }
-firebaseAppLocationPlot.prototype.events = function(){
+LocationPlot.prototype.events = function(){
   this.checkForChanges();
 }
-firebaseAppLocationPlot.prototype.checkForChanges = function(){
+LocationPlot.prototype.checkForChanges = function(){
   var self = this;
   firebaseAppLocationInput.myDataRef.on('child_added', function(snapshot) {
     var location = snapshot.val();
@@ -19,7 +19,7 @@ firebaseAppLocationPlot.prototype.checkForChanges = function(){
     mapApp.createMarker(lng, lat, name);
   });
 }
-firebaseAppLocationPlot.prototype.displayMarker = function(name, longitude, latitude){
+LocationPlot.prototype.displayMarker = function(name, longitude, latitude){
   if(location.search === "?test"){ console.log("#############"); }
   if(location.search === "?test"){ console.log("***FIREBASE**"); }
   if(location.search === "?test"){ console.log("*************"); }

@@ -22,5 +22,8 @@
 
 $(function(){ $(document).foundation(); });
 
-firebaseAppLocationPlot.initialize();
+var firebaseAppLocationPlot = new LocationPlot;
+var firebaseAppLocationInput = new LocationInput;
+
 firebaseAppLocationInput.initialize();
+firebaseAppLocationPlot.initialize(); //Dependent on firebaseAppLocationInput
