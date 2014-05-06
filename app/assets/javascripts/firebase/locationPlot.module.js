@@ -19,7 +19,7 @@ LocationPlot.prototype.checkForChanges = function(){
   var self = this;
   firebaseAppLocationInput.myDataRef.on('child_added', function(snapshot) {
     var location = snapshot.val();
-    console.log(self.snapshots);
+    if(location.search === "?test=true"){ console.log(self.snapshots); }
     self.snapshots.push(location);
     self.displayMarker(location.name, location.longitude, location.latitude);
     var name = location.name;

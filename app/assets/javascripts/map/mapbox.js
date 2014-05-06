@@ -8,6 +8,37 @@ var MapApp = function(){
 MapApp.prototype.initialize = function(){
   this.loadMap();
   this.mouseActions();
+  this.tooltipBehavior();
+}
+
+MapApp.prototype.tooltipBehavior = function(){
+  this.map.on('layeradd', function(e) {
+    var isDraft = false;
+    if(e.layer._geojson !== undefined){
+      if(e.layer._geojson.properties !== undefined){
+        if(e.layer._geojson.properties.draft !== undefined){
+          isDraft = (e.layer._geojson.properties.draft === true);
+        }
+      }
+    }
+    if(isDraft){
+      var marker = e.layer;
+      console.log(e);
+
+      // var context = message;
+      // var template = HandlebarsTemplates['notices/noticeBar'](context);
+      // $('#notice-bar').append(template);
+
+      // Create custom popup content
+      var popupContent =  '<h1>test</h1>';
+
+      // http://leafletjs.com/reference.html#popup
+      marker.bindPopup(popupContent,{
+          closeButton: true,
+          minWidth: 320
+      });
+    }
+  });
 }
 
 MapApp.prototype.countMarkers = function(){
@@ -125,12 +156,11 @@ MapApp.prototype.MapboxMarker = function (lng, lat, title, desc, saved){
   }
 
   if(saved === false){
+    geoData.properties['url'] = '#save_location';
     geoData.properties['draft'] = true;
     geoData.properties['marker-color'] = "#3a4353";
     geoData.properties['marker-size'] = "small";
   }
 
   L.mapbox.featureLayer(geoData).addTo(mapApp.map);
-  var myLayer = L.mapbox.featureLayer().addTo(map);
-
 }
