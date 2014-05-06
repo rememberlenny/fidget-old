@@ -4,5 +4,17 @@
   background: white;
   position: absolute;
   z-index: $module-zindex;
+}
 
+#location-save{
+  list-style: none;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  .header{
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  button{
+    margin-bottom: 0px;
+  }
 }

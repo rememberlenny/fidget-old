@@ -21,19 +21,15 @@ MapApp.prototype.tooltipBehavior = function(){
         }
       }
     }
+
     if(isDraft){
       var marker = e.layer;
-      console.log(e);
+      if(location.search === "?test=true"){ console.log(e); }
 
-      // var context = message;
-      // var template = HandlebarsTemplates['notices/noticeBar'](context);
-      // $('#notice-bar').append(template);
-
-      // Create custom popup content
-      var popupContent =  '<h1>test</h1>';
+      var template = HandlebarsTemplates['controls/addMapElement']();
 
       // http://leafletjs.com/reference.html#popup
-      marker.bindPopup(popupContent,{
+      marker.bindPopup(template,{
           closeButton: true,
           minWidth: 320
       });
