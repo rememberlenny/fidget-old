@@ -2,7 +2,7 @@ var NoticeApp = function(){}
 
 NoticeApp.prototype.displayControlNotice = function(element, detail){
   var message = {
-    notice_message:"Please enter a " + detail + " before proceeding.",
+    notice_message: detail,
   }
   var context = message;
   var template = HandlebarsTemplates['notices/noticeBar'](context);

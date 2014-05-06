@@ -82,7 +82,7 @@ MapApp.prototype.mouseActions = function(){
     if(location.search === "?test=true"){ console.log( e.containerPoint.toString() + ', ' + e.latlng.toString()); }
   });
   this.map.on('click', function(e) {
-
+    addMapControls.displayOptions();
     if(location.search === "?test=true"){ $('#longitudeInput').val(e.latlng.lng); }
     if(location.search === "?test=true"){ $('#latitudeInput').val(e.latlng.lat); }
 

@@ -29,8 +29,9 @@ var mapApp = new MapApp;
 var firebaseAppLocationPlot = new LocationPlot;
 var firebaseAppLocationInput = new LocationInput;
 var noticeApp = new NoticeApp;
+var addMapControls = new AddMapElement;
 
 mapApp.initialize();
 firebaseAppLocationInput.initialize();
 firebaseAppLocationPlot.initialize(); //Dependent on firebaseAppLocationInput
-
+addMapControls.initialize();
