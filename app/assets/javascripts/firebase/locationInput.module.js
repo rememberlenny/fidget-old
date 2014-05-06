@@ -20,7 +20,7 @@ LocationInput.prototype.submitToFirebaseEvent = function(){
       var name  = $('#nameInput').val();
       var lng   = $('#longitudeInput').val();
       var lat   = $('#latitudeInput').val();
-      self.submitToFirebase(name, lng, lat)
+      self.submitToFirebase(name, lng, lat);
       $('#nameInput, #longitudeInput, #latitudeInput').val('');
     }
   });

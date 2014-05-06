@@ -51,32 +51,43 @@ MapApp.prototype.loadMap = function(){
 
 }
 
+MapApp.prototype.clearUnsavedMarkers = function(){
+
+}
+
 MapApp.prototype.mouseActions = function(){
   var self = this;
   this.map.on('mousemove', function(e) {
     if(location.search === "?test=true"){ console.log( e.containerPoint.toString() + ', ' + e.latlng.toString()); }
   });
   this.map.on('click', function(e) {
+    self.clearUnsavedMarkers();
+
     if(location.search === "?test=true"){ $('#longitudeInput').val(e.latlng.lng); }
     if(location.search === "?test=true"){ $('#latitudeInput').val(e.latlng.lat); }
 
     // Creates map marker on click
-    self.createMarker(e.latlng.lng, e.latlng.lat);
+    self.createMarker(e.latlng.lng, e.latlng.lat, '', '', false);
   });
 }
 
-MapApp.prototype.createMarker = function(lng, lat, title, desc){
+MapApp.prototype.createMarker = function(lng, lat, title, desc, savedVar){
   var args  = arguments;
   var lng   = args[0];
   var lat   = args[1];
+  var saved = false;
+  if(savedVar === true){
+    saved = true;
+  }
   if(typeof args[2] === 'undefined'){ var desc  = ''; } else { var title  = args[2]; }
   if(typeof args[3] === 'undefined'){ var desc  = ''; } else { var desc   = args[3]; }
 
-  new mapApp.MapboxMarker(lng, lat, title, desc);
+  new mapApp.MapboxMarker(lng, lat, title, desc, saved);
 }
 
-MapApp.prototype.MapboxMarker = function (lng, lat, title, desc){
+MapApp.prototype.MapboxMarker = function (lng, lat, title, desc, saved){
   var map = mapApp.map;
+
   var geoData = {
     "type": "Feature",
     "geometry": {
@@ -91,6 +102,12 @@ MapApp.prototype.MapboxMarker = function (lng, lat, title, desc){
       "marker-symbol": "harbor"
     }
   }
+
+  if(saved === false){
+    geoData.properties['marker-color'] = "#3a4353";
+    geoData.properties['marker-size'] = "small";
+  }
+
   L.mapbox.featureLayer(geoData).addTo(mapApp.map);
   var myLayer = L.mapbox.featureLayer().addTo(map);
 }
