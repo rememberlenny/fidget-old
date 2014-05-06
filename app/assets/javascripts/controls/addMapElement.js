@@ -7,6 +7,21 @@ AddMapElement.prototype.initialize = function(){
 
 AddMapElement.prototype.events = function(){
   this.clickDisplayOptions();
+  this.watchWindowClick();
+}
+
+AddMapElement.prototype.watchWindowClick = function(){
+  var self = this;
+  $('#map').on('click', function(e){
+    var xPos = e.clientX;
+    var yPos = e.clientY;
+    console.log(e);
+    self.positionAddElementButton(xPos, yPos);
+  });
+}
+
+AddMapElement.prototype.positionAddElementButton = function(xPos, yPos){
+  $('#control-submit').css('left', xPos).css('top', yPos);
 }
 
 AddMapElement.prototype.clickDisplayOptions = function(){

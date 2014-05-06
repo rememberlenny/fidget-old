@@ -1,22 +1,23 @@
 #control-submit{
   position: absolute;
-  top: 50px;
-  left: 10px;
-  background: rgb(51, 51, 51);
+  background: rgba(51, 51, 51, .3);
   z-index: 5;
   font-size: 2em;
   line-height: 1em;
   font-weight: bold;
   padding-bottom: .1em;
-  padding-left: .1em;
-  padding-right: .1em;
-  border-radius: 50px;
+  padding-left: 0.085em;
+  padding-right: .15em;
+  border-radius: 0px 50px 50px 50px;
   border: 6px solid black;
-  opacity: .3;
+  color: white;
+  opacity: 0;
+  box-shadow: 3px 3px 1px 0px rgba(0,0,0,.5);
   a:hover{
     background: none;
   }
   &.visible{
+    background: rgba(51, 51, 51, .9);
     opacity: 1;
   }
 }
