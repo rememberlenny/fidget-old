@@ -15,7 +15,7 @@ LocationInput.prototype.events = function(){
 LocationInput.prototype.submitToFirebaseEvent = function(){
   if(location.search === "?test=true"){ console.log('Firebase submitToFirebase initialized'); }
   var self = this;
-  $('#latitudeInput').keypress(function (e) {
+  $('#latitudeInput, #nameInput').keypress(function (e) {
     if (e.keyCode == 13) {
       var name  = $('#nameInput').val();
       var lng   = $('#longitudeInput').val();

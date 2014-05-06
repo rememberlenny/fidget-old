@@ -12,6 +12,7 @@ MapApp.prototype.initialize = function(){
 }
 
 MapApp.prototype.tooltipBehavior = function(){
+  var self = this;
   this.map.on('layeradd', function(e) {
     var isDraft = false;
     if(e.layer._geojson !== undefined){
@@ -24,14 +25,14 @@ MapApp.prototype.tooltipBehavior = function(){
 
     if(isDraft){
       var marker = e.layer;
+      var context = self.lastClickCord;
+      var template = HandlebarsTemplates['controls/addMapElement'](context);
+
       if(location.search === "?test=true"){ console.log(e); }
-
-      var template = HandlebarsTemplates['controls/addMapElement']();
-
       // http://leafletjs.com/reference.html#popup
       marker.bindPopup(template,{
           closeButton: true,
-          minWidth: 320
+          minWidth: 350
       });
     }
   });
@@ -112,6 +113,11 @@ MapApp.prototype.mouseActions = function(){
     addMapControls.displayOptions();
     if(location.search === "?test=true"){ $('#longitudeInput').val(e.latlng.lng); }
     if(location.search === "?test=true"){ $('#latitudeInput').val(e.latlng.lat); }
+
+    self.lastClickCord = {
+      lng: e.latlng.lng,
+      lat: e.latlng.lat
+    }
 
     // Creates map marker on click
     self.createMarker(e.latlng.lng, e.latlng.lat, '', '', false);

@@ -18,3 +18,12 @@
     margin-bottom: 0px;
   }
 }
+
+.lnglat-display{
+  div:first-child{
+    padding-left: 0px
+  }
+  div:last-child{
+    padding-right: 0px
+  }
+}

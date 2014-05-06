@@ -1,16 +1,18 @@
 <ul id="location-save">
-  <li><label class="header">Save Location</label></li>
+  <li class="text-center"><label class="header">Save Location</label></li>
   <li class="location-input">
     <label for="">Name</label>
     <input type='text' id='nameInput' placeholder='Name'>
   </li>
-  <li class="location-input">
-    <label for="">Longitude</label>
-    <input type='text' id='longitudeInput' placeholder='40.714623'>
-  </li>
-  <li class="location-input">
-    <label for="">Latitude</label>
-    <input type='text' id='latitudeInput' placeholder='-74.00663'>
-  </li>
+  <div class="row lnglat-display">
+    <div class="large-6 medium-6 column location-input">
+      <label for="">Longitude</label>
+      <input type='text' id='longitudeInput' value='{{lng}}'>
+    </div>
+    <div class="large-6 medium-6 column location-input">
+      <label for="">Latitude</label>
+      <input type='text' id='latitudeInput' value='{{lat}}'>
+    </div>
+  </div>
   <li><button class="expand">Submit</button></li>
 </ul>
