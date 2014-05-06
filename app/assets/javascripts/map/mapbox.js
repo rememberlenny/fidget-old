@@ -1,5 +1,5 @@
-// var click = document.getElementById('click'),
-//     mousemove = document.getElementById('mousemove');
+// Dependent on mapApp
+// @ mapApp.clearUnsavedMarkers();
 
 var MapApp = function(){
   this.allGeoJSON = [];
@@ -21,7 +21,9 @@ MapApp.prototype.countMarkers = function(){
 }
 
 MapApp.prototype.saveMarkers = function(){
-  // Called by this.countMarkers()
+// Dependent on mapApp
+// @ mapApp.clearUnsavedMarkers();
+// Called by this.countMarkers()
   var self = this;
   for( var i = 0; i< self._markers.length; i++ ){
     // Defining variables inside if statements is bad practice
@@ -58,10 +60,12 @@ MapApp.prototype.clearMarkersArray = function(){
 
 MapApp.prototype.deleteUnsyncedMarkers = function(){
   var self = this;
-  for(var i = 0; i < self.markers.length; i++){
-    var currentMarker = self.markers[i];
-    if( currentMarker._geojson.properties.draft === true ){
-      mapApp.map.removeLayer(mapApp.markers[i]);
+  if(self.markers !== undefined){
+    for(var i = 0; i < self.markers.length; i++){
+      var currentMarker = self.markers[i];
+      if( currentMarker._geojson.properties.draft === true ){
+        mapApp.map.removeLayer(mapApp.markers[i]);
+      }
     }
   }
 }
@@ -128,4 +132,5 @@ MapApp.prototype.MapboxMarker = function (lng, lat, title, desc, saved){
 
   L.mapbox.featureLayer(geoData).addTo(mapApp.map);
   var myLayer = L.mapbox.featureLayer().addTo(map);
+
 }

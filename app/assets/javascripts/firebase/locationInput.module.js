@@ -22,6 +22,7 @@ LocationInput.prototype.submitToFirebaseEvent = function(){
       var lat   = $('#latitudeInput').val();
       self.submitToFirebase(name, lng, lat);
       $('#nameInput, #longitudeInput, #latitudeInput').val('');
+      mapApp.clearUnsavedMarkers();
     }
   });
 }

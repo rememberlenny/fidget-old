@@ -16,7 +16,6 @@ LocationPlot.prototype.checkForChanges = function(){
 // Dependent on mapApp
 // @ mapApp.createMarker(lng, lat, name, '', true);
 // @ mapApp.countMarkers();
-// @ mapApp.clearUnsavedMarkers();
   var self = this;
   firebaseAppLocationInput.myDataRef.on('child_added', function(snapshot) {
     var location = snapshot.val();
@@ -28,7 +27,6 @@ LocationPlot.prototype.checkForChanges = function(){
     var lat = location.latitude;
     mapApp.createMarker(lng, lat, name, '', true);
     mapApp.countMarkers();
-    mapApp.clearUnsavedMarkers();
   });
 }
 
