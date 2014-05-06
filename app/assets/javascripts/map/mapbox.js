@@ -34,6 +34,7 @@ MapApp.prototype.tooltipBehavior = function(){
           closeButton: true,
           minWidth: 350
       });
+
     }
   });
 }
@@ -122,6 +123,7 @@ MapApp.prototype.mouseActions = function(){
     // Creates map marker on click
     self.createMarker(e.latlng.lng, e.latlng.lat, '', '', false);
     self.clearUnsavedMarkers();
+
   });
 }
 

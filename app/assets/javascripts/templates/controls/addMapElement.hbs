@@ -4,7 +4,11 @@
     <label for="">Name</label>
     <input type='text' id='nameInput' placeholder='Name'>
   </li>
-  <div class="row lnglat-display">
+  <li class="location-input">
+    <label for="">Description</label>
+    <textarea id='descInput' placeholder='Description'></textarea>
+  </li>
+{{!--   <div class="row lnglat-display">
     <div class="large-6 medium-6 column location-input">
       <label for="">Longitude</label>
       <input type='text' id='longitudeInput' value='{{lng}}'>
@@ -13,6 +17,6 @@
       <label for="">Latitude</label>
       <input type='text' id='latitudeInput' value='{{lat}}'>
     </div>
-  </div>
-  <li><button class="expand">Submit</button></li>
+  </div> --}}
+  <li><button id="submitLocationSave" class="expand">Submit</button></li>
 </ul>
