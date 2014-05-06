@@ -8,11 +8,30 @@
   width: 400px;
   top: -600px;
   opacity: 0;
-  @include transition(top, 500ms, ease-in, 0s);
+  @include transition(top, 500ms, ease, 0s);
   &.visible{
     top: 60px;
     opacity: 1;
     left: 50%;
     margin-left: -200px;
+  }
+}
+
+#notice-bar{
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  background: rgba(255, 255, 255, .8);
+  .notice-message{
+    &.current{
+      background: rgba(255, 255, 255, .9);
+    }
+    padding-top:.4em;
+    padding-bottom: .5em;
+    margin-bottom: 0em;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    opacity: 0;
+    @include transition(opacity, 500ms, ease, 0s);
   }
 }

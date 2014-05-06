@@ -28,6 +28,7 @@ $(function(){ $(document).foundation(); });
 var mapApp = new MapApp;
 var firebaseAppLocationPlot = new LocationPlot;
 var firebaseAppLocationInput = new LocationInput;
+var noticeApp = new NoticeApp;
 
 mapApp.initialize();
 firebaseAppLocationInput.initialize();
