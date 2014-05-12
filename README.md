@@ -1,4 +1,4 @@
-
+![Location Gif](https://raw.githubusercontent.com/rememberlenny/map-track-rails/master/app/assets/images/location.gif)
 
 #tanqueray: Real-time Collaborative Maps
 
