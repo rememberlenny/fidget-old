@@ -15,3 +15,12 @@ This uses Firebase as a distributed database. The points added to a map will app
 ##External
 
 This uses Mapbox and Firebase.
+
+## Future
+
+- add interval to event to add new tag
+- create search for current tags
+- create hook to gooe docs
+- create faceted filter for displayed tags
+- create UI for designing the inside of boxes
+- have multiple icon types
