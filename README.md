@@ -24,3 +24,4 @@ This uses Mapbox and Firebase.
 - create faceted filter for displayed tags
 - create UI for designing the inside of boxes
 - have multiple icon types
+- create my current location 
