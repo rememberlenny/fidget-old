@@ -10,6 +10,7 @@ gem 'handlebars_assets'
 gem 'foundation-rails'
 gem 'mapbox-rails'
 
+gem 'geocoder'
 
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
