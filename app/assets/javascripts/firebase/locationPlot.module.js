@@ -27,6 +27,7 @@ LocationPlot.prototype.checkForChanges = function(){
     var lat = location.latitude;
     mapApp.createMarker(lng, lat, name, '', true);
     mapApp.countMarkers();
+    listApp.addLocation(lng, lat, name);
   });
 }
 
