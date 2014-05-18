@@ -1,4 +1,6 @@
 MapTrackRails::Application.routes.draw do
+  resources :locations
+
   root 'pages#home'
   get "pages/map_high"
   get "pages/home"
