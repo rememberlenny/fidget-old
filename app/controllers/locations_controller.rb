@@ -1,6 +1,28 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
+  def create_geojson
+    @locations = Location.all
+    @geojson = Array.new
+
+    @locations.each do |location|
+      @geojson << {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [location.longitude, location.latitude]
+        },
+        properties: {
+          name: location.name,
+          address: location.street,
+          :'marker-color' => '#00607d',
+          :'marker-symbol' => 'circle',
+          :'marker-size' => 'medium'
+        }
+      }
+    end
+  end
+
   # GET /locations
   # GET /locations.json
   def index
