@@ -31,3 +31,5 @@ This uses Mapbox and Firebase.
 - add "find nearby"  [Geocoder](http://railscasts.com/episodes/273-geocoder)
 - type address to get geocords [Typeahead Address Picker](https://github.com/sgruhier/typeahead-addresspicker)
 - combine Geocoder and Mapbox [Blog post](http://vladigleba.com/blog/2013/11/14/using-mapbox-with-ruby-on-rails/)
+- sync the local locations db with the firebase db?
+- create user associations to the locations
