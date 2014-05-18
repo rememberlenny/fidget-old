@@ -20,6 +20,11 @@ class LocationsController < ApplicationController
           :'marker-size' => 'medium'
         }
       }
+
+      respond_to do |format|
+        format.html
+        format.json { render json: @geojson }  # respond with the created JSON object
+      end
     end
   end
 
