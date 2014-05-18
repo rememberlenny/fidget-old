@@ -30,3 +30,4 @@ This uses Mapbox and Firebase.
 - create "get my current location" [HTML 5 Current Location](https://developer.mozilla.org/en-US/docs/WebAPI/Using_geolocation)
 - add "find nearby"  [Geocoder](http://railscasts.com/episodes/273-geocoder)
 - type address to get geocords [Typeahead Address Picker](https://github.com/sgruhier/typeahead-addresspicker)
+- combine Geocoder and Mapbox [Blog post](http://vladigleba.com/blog/2013/11/14/using-mapbox-with-ruby-on-rails/)
