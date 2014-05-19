@@ -34,13 +34,11 @@ This uses Mapbox and Firebase.
 - sync the local locations db with the firebase db?
 - create user associations to the locations
 
-## KEYS
-
-
+## Keys
 
 - devise.rb
-- ENV['FB_APP_ID_MM']
-- ENV['FB_APP_SECRET_MM']
+  - ENV['FB_APP_ID_MM']
+  - ENV['FB_APP_SECRET_MM']
 
 - analytics_ruby.rb
-- ENV['SEGMENT_IO_MAPMADE']
+  - ENV['SEGMENT_IO_MAPMADE']
