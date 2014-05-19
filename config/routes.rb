@@ -4,6 +4,7 @@ MapTrackRails::Application.routes.draw do
                         :omniauth_callbacks => "omniauth_callbacks"
                       }
 
+  resources :users
   resources :locations
 
   root 'pages#home'
