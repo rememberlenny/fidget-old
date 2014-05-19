@@ -14,8 +14,6 @@ MapTrackRails::Application.routes.draw do
   get "pages/contact"
   get "pages/download"
 
-  resources :scaffolds
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
