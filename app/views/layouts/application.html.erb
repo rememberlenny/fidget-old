@@ -10,6 +10,7 @@
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
     <script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
+    <%= render 'partial/analytics/segmentio' %>
   </head>
 
   <body class="<%= body_css %>">
@@ -38,6 +39,14 @@
       </div>
     </div>
 
+    <script>
+      <% if current_user %>
+        analytics.identify('current_user.id', {
+            email   : 'current_user.email',
+            name    : 'current_user.name'
+        });
+      <% end %>
+    </script>
 
     <%= javascript_include_tag "application" %>
 
