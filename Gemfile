@@ -17,7 +17,6 @@ gem 'jbuilder', '~> 1.2'
 
 # gem 'newrelic_rpm'
 # gem 'analytics-ruby', '~>1.0'
-
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem 'rails_12factor'
