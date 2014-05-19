@@ -41,3 +41,6 @@ This uses Mapbox and Firebase.
 - devise.rb
 - ENV['FB_APP_ID_MM']
 - ENV['FB_APP_SECRET_MM']
+
+- analytics_ruby.rb
+- ENV['SEGMENT_IO_MAPMADE']
