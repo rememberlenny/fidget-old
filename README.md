@@ -33,3 +33,11 @@ This uses Mapbox and Firebase.
 - combine Geocoder and Mapbox [Blog post](http://vladigleba.com/blog/2013/11/14/using-mapbox-with-ruby-on-rails/)
 - sync the local locations db with the firebase db?
 - create user associations to the locations
+
+## KEYS
+
+
+
+- devise.rb
+- ENV['FB_APP_ID_MM']
+- ENV['FB_APP_SECRET_MM']
