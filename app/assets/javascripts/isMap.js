@@ -41,19 +41,21 @@ mapApp = {
     }
   },
   innerWrapWindowDefine: function(){
-    var self = this;
-    var isWindowNotZero = ($(window).height() > 0);
-    var isInnerNotZero  = ($('.inner-wrap').height() > 0);
-    if( isInnerNotZero && isWindowNotZero ){
-      this.innerWrapHeight = $('.inner-wrap').height();
-      this.windowHeight = $(window).height();
-      this.isSameWindowAndInner = (this.windowHeight === this.innerWrapHeight);
-      if(location.search === "?test=true"){ console.log('this.innerWrapHeight = ' + this.innerWrapHeight); }
-      if(location.search === "?test=true"){ console.log('this.windowHeight = ' + this.windowHeight); }
-      if(location.search === "?test=true"){ console.log('this.isSameWindowAndInner = ' + this.isSameWindowAndInner); }
-      if(location.search === "?test=true"){ console.log('Window checked.'); }
+    if($('body').hasClass('app-mode')){
+      var self = this;
+      var isWindowNotZero = ($(window).height() > 0);
+      var isInnerNotZero  = ($('.inner-wrap').height() > 0);
+      if( isInnerNotZero && isWindowNotZero ){
+        this.innerWrapHeight = $('.inner-wrap').height();
+        this.windowHeight = $(window).height();
+        this.isSameWindowAndInner = (this.windowHeight === this.innerWrapHeight);
+        if(location.search === "?test=true"){ console.log('this.innerWrapHeight = ' + this.innerWrapHeight); }
+        if(location.search === "?test=true"){ console.log('this.windowHeight = ' + this.windowHeight); }
+        if(location.search === "?test=true"){ console.log('this.isSameWindowAndInner = ' + this.isSameWindowAndInner); }
+        if(location.search === "?test=true"){ console.log('Window checked.'); }
 
-      this.timerChecker();
+        this.timerChecker();
+      }
     } else {
       if(location.search === "?test=true"){ console.log('Checking window again.'); }
       setTimeout( function(){
