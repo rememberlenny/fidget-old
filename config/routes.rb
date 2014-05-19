@@ -4,16 +4,16 @@ MapTrackRails::Application.routes.draw do
                         :omniauth_callbacks => "omniauth_callbacks"
                       }
 
-  resources :users
-
   resources :locations
 
   root 'pages#home'
+
   get "pages/map_high"
   get "pages/home"
   get "pages/about"
   get "pages/contact"
   get "pages/download"
+
   resources :scaffolds
 
   # The priority is based upon order of creation: first created -> highest priority.
