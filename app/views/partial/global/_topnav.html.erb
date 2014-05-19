@@ -10,4 +10,18 @@
   <section class="right-small">
     <a class="right-off-canvas-toggle menu-icon" href="#"> <h1 class="title">Chat</h1> <span></span></a>
   </section>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <% if user_signed_in? %>
+        <li><a href="">Logged in as <strong><%= current_user.email %></strong>.</a></li>
+        <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+      <% end %>
+    </ul>
+  </section>
 </nav>
