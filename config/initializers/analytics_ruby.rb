@@ -1,5 +1,3 @@
-require 'analytics-ruby'
-
 Analytics = AnalyticsRuby       # Alias for convenience
 Analytics.init({
     secret: 'rrqywcfxcs',          # The write key for atriangle/mapmade
