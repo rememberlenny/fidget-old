@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Count</th>
+      <th>Last Modified</th>
+    </tr>
+<% @locations.each do |location| %>
+  <tbody>
+    <tr>
+      <td><%= location.name %></td>
+      <td><%= location.count %></td>
+      <td><%= location.last_modified %></td>
+    </tr>
+  </tbody>
+<% end %>
+
+</table>
