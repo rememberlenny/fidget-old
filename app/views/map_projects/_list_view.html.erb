@@ -1,17 +1,15 @@
 <table>
   <thead>
     <tr>
-      <th>Address</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
+      <th>Name</th>
+      <th>Locations</th>
     </tr>
   </thead>
-  <% @locations.each do |location| %>
+  <% @projects.each do |project| %>
   <tbody>
     <tr>
-      <td><%= location.address %></td>
-      <td><%= location.longitude %></td>
-      <td><%= location.latitude %></td>
+      <td><%= project.name %></td>
+      <td><%= project.locations.count %></td>
     </tr>
   </tbody>
   <% end %>

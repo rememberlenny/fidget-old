@@ -10,11 +10,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def jump_page
-    # @locations = Location.where(user_id: current_user.id)
   end
 
   def show
-    @locations = Location.all
+    @projects = Project.where(user_id: current_user.id)
     render 'jump_page'
   end
 
