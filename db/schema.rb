@@ -19,11 +19,20 @@ ActiveRecord::Schema.define(version: 201405191004406) do
     t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "project_id"
   end
 
   create_table "map_projects", force: true do |t|
     t.string   "name"
     t.datetime "last_modified"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
