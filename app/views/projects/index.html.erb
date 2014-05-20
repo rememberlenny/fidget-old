@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Name</th>
       <th>User</th>
       <th></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
+        <td><%= project.id %></td>
         <td><%= project.name %></td>
         <td><%= project.user_id %></td>
         <td><%= link_to 'Show', project %></td>
