@@ -13,7 +13,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @projects = Project.where(user_id: current_user.id)
+    u = current_user
+    @projects = u.projects.where(user_id: current_user.id)
     render 'jump_page'
   end
 
