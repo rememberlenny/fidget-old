@@ -10,9 +10,11 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def jump_page
+
   end
 
   def show
+    @locations = Location.all
     render 'jump_page'
   end
 

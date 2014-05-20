@@ -1,18 +1,18 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Count</th>
-      <th>Last Modified</th>
+      <th>Address</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
     </tr>
-<% @locations.each do |location| %>
+  </thead>
+  <% @locations.each do |location| %>
   <tbody>
     <tr>
-      <td><%= location.name %></td>
-      <td><%= location.count %></td>
-      <td><%= location.last_modified %></td>
+      <td><%= location.address %></td>
+      <td><%= location.longitude %></td>
+      <td><%= location.latitude %></td>
     </tr>
   </tbody>
-<% end %>
-
+  <% end %>
 </table>
