@@ -7,11 +7,11 @@ MapTrackRails::Application.routes.draw do
                       }
 
   resources :users do
+    resources :projects do
+      resources :locations
+    end
   end
 
-  resources :projects do
-    resources :locations
-  end
 
   root 'pages#home'
 
