@@ -4,8 +4,9 @@
 
   <div class="large-6 column">
     <h2>Projects</h2>
-    <%= render 'map_projects/list_view' %>
+    <%= render 'partial/map_projects/list_view' %>
   </div>
+  <%= link_to  'Create a new project', new_project_path, class: 'button' %>
   <div class="large-6 column">
     <h2>Account</h2>
     <%= render 'devise/display/profile_short' %>

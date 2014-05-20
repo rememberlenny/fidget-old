@@ -1,14 +1,17 @@
 MapTrackRails::Application.routes.draw do
 
-  resources :projects
 
   devise_for :users,  path_names: {sign_in: "login", sign_out: "logout"},
                       controllers: {
                         :omniauth_callbacks => "omniauth_callbacks"
                       }
 
-  resources :users
-  resources :locations
+  resources :users do
+  end
+
+  resources :projects do
+    resources :locations
+  end
 
   root 'pages#home'
 
