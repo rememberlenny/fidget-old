@@ -2,6 +2,8 @@
 
 var LocationPlot = function(){
   this.snapshots = [];
+  this.project_id = '';
+  this.server_location_api = 'http://localhost:3000/project/' + this.project_id + 'locations.json';
 }
 
 LocationPlot.prototype.initialize = function(){
@@ -10,6 +12,21 @@ LocationPlot.prototype.initialize = function(){
 
 LocationPlot.prototype.events = function(){
   this.checkForChanges();
+}
+
+LocationPlot.prototype.pullFromBackend = function(){
+  // This is not a real "get" request
+  // The current_results is also not a real object
+  $.get(this.server_location_api, function(data){
+    var map_results = data;
+    for ( var i = 0; i < data.length; i++ ){
+      var current_results = data[i];
+      var lng = current_results['longitude'];
+      var lat = current_results['latitude'];
+      var name = current_results['name'];
+      mapApp.createMarker(lng, lat, name, '', true);
+    }
+  });
 }
 
 LocationPlot.prototype.checkForChanges = function(){
