@@ -26,7 +26,12 @@ $(function(){ $(document).foundation(); });
 
 
 var mapApp = new MapApp;
+
+// @params for LocationPLot
+// project_id: ID of the project,
+// server_location_api_url: root_url
 var firebaseAppLocationPlot = new LocationPlot;
+
 var firebaseAppLocationInput = new LocationInput;
 var noticeApp = new NoticeApp;
 var addMapControls = new AddMapElement;
