@@ -109,6 +109,11 @@ MapApp.prototype.mouseActions = function(){
   var self = this;
   this.map.on('mousemove', function(e) {
     if(location.search === "?test=true"){ console.log( e.containerPoint.toString() + ', ' + e.latlng.toString()); }
+
+    if($('.location-save').length > 0 ){
+
+      firebaseAppLocationInput.submitToFirebaseEvent();
+    }
   });
   this.map.on('click', function(e) {
     addMapControls.displayOptions();
