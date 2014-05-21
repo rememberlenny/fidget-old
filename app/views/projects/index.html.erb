@@ -1,31 +1,35 @@
-<h1>Listing projects</h1>
+<div class="row">
+  
+  <h1>Listing projects</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
+  <table class="large-12">
+    <thead>
       <tr>
-        <td><%= project.id %></td>
-        <td><%= project.name %></td>
-        <td><%= project.user_id %></td>
-        <td><%= link_to 'Show', project_path(@user, project)  %></td>
-        <td><%= link_to 'Edit', edit_project_path(@user, project) %></td>
-        <td><%= link_to 'Destroy', [project], data: { confirm: 'Are you sure?' }, method: :delete %></td>
+        <th>Id</th>
+        <th>Name</th>
+        <th>User</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @projects.each do |project| %>
+        <tr>
+          <td><%= project.id %></td>
+          <td><%= project.name %></td>
+          <td><%= project.user_id %></td>
+          <td><%= link_to 'Show', project_path(@user, project)  %></td>
+          <td><%= link_to 'Edit', edit_project_path(@user, project) %></td>
+          <td><%= link_to 'Destroy', [project], data: { confirm: 'Are you sure?' }, method: :delete %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Project', new_project_path %>
+  <br>
+
+  <%= link_to 'New Project', new_project_path %>
+
+</div>
