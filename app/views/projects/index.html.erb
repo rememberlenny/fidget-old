@@ -18,9 +18,9 @@
         <td><%= project.id %></td>
         <td><%= project.name %></td>
         <td><%= project.user_id %></td>
-        <td><%= link_to 'Show', user_project %></td>
-        <td><%= link_to 'Edit', edit_user_project_path(project) %></td>
-        <td><%= link_to 'Destroy', user_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user_project_path(@user, project)  %></td>
+        <td><%= link_to 'Edit', edit_user_project_path(@user, project) %></td>
+        <td><%= link_to 'Destroy', [@user, project], data: { confirm: 'Are you sure?' }, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>

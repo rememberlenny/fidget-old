@@ -4,7 +4,8 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @user     = User.find(params[:user_id])
+    @projects  = @user.projects.all
   end
 
   # GET /projects/1
