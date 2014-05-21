@@ -14,8 +14,8 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    u = current_user
-    @project = u.projects.new
+    @user     = User.find(params[:user_id])
+    @project  = @user.projects.new
   end
 
   # GET /projects/1/edit
@@ -25,11 +25,12 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = project.new(project_params)
+    @user     = User.find(params[:user_id])
+    @project  = @user.projects.new(project_params)
 
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
+        format.html { redirect_to [@user, @project], notice: 'Project was successfully created.' }
         format.json { render action: 'show', status: :created, location: @project }
       else
         format.html { render action: 'new' }
