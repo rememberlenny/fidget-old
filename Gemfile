@@ -25,6 +25,8 @@ gem 'devise'
 gem 'newrelic_rpm'
 gem 'analytics-ruby', '~>1.0'
 
+gem 'sidekiq'
+
 group :doc do
   gem 'sdoc', require: false
 end
