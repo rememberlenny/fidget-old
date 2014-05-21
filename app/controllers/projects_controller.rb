@@ -4,34 +4,34 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @user     = User.find(params[:user_id])
+    @user     = User.find(current_user.id)
     @projects  = @user.projects.all
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
-    @user     = User.find(params[:user_id])
+    @user     = User.find(current_user.id)
     @project  = @user.projects.find(params[:id])
     @locations = @project.locations.all
   end
 
   # GET /projects/new
   def new
-    @user     = User.find(params[:user_id])
+    @user     = User.find(current_user.id)
     @project  = @user.projects.new
   end
 
   # GET /projects/1/edit
   def edit
-    @user     = User.find(params[:user_id])
+    @user     = User.find(current_user.id)
     @project  = @user.projects.find(params[:id])
   end
 
   # POST /projects
   # POST /projects.json
   def create
-    @user     = User.find(params[:user_id])
+    @user     = User.find(current_user.id)
     @project  = @user.projects.new(project_params)
 
     respond_to do |format|
@@ -48,7 +48,7 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
-    @user     = User.find(params[:user_id])
+    @user     = User.find(current_user.id)
     @project  = @user.projects.find(params[:id])
     respond_to do |format|
       if @project.update(project_params)
@@ -64,7 +64,7 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
-    @user     = User.find(params[:user_id])
+    @user     = User.find(current_user.id)
     @project  = @user.projects.find(params[:id])
     @project.destroy
     respond_to do |format|
