@@ -3,7 +3,6 @@
     <tr>
       <th>Name</th>
       <th>Locations</th>
-      <th></th>
     </tr>
   </thead>
   <% @projects.each do |project| %>
@@ -11,15 +10,12 @@
     <tr>
       <td>
         <%= link_to user_project_path(@user, project) do %>
-          <%= project.name %>
+          <h3>
+            <%= project.name %>
+          </h3>
         <% end %>
       </td>
-      <td><%= project.locations.count %></td>
-      <td>
-        <%= link_to user_project_path(@user, project), class: 'button small' do %>
-          Start
-        <% end %>
-      </td>
+      <td class="text-center"><%= project.locations.count %></td>
     </tr>
   </tbody>
   <% end %>
