@@ -13,6 +13,9 @@
     <tr>
       <td><%= project.name %></td>
       <td><%= project.locations.count %></td>
+      <td><%= link_to 'Show', user_project_path(@user, project)  %></td>
+      <td><%= link_to 'Edit', edit_user_project_path(@user, project) %></td>
+      <td><%= link_to 'Destroy', [@user, project], data: { confirm: 'Are you sure?' }, method: :delete %></td>
     </tr>
   </tbody>
   <% end %>
