@@ -1,9 +1,11 @@
 // Dependent on mapApp in checkForChanges();
 
-var LocationPlot = function(){
+var LocationPlot = function(project_id, server_location_api_url){
   this.snapshots = [];
-  this.project_id = '';
-  this.server_location_api = 'http://localhost:3000/project/' + this.project_id + 'locations.json';
+  this.project_id = project_id;
+
+  //server_location_api_url = 'http://localhost:3000/project/' + this.project_id + 'locations.json';
+  this.server_location_api = server_location_api_url;
 }
 
 LocationPlot.prototype.initialize = function(){
@@ -15,6 +17,8 @@ LocationPlot.prototype.events = function(){
 }
 
 LocationPlot.prototype.pullFromBackend = function(){
+  // @params: project_id
+  // @params: server_location_api
   // This is not a real "get" request
   // The current_results is also not a real object
   $.get(this.server_location_api, function(data){
