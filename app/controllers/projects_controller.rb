@@ -21,6 +21,8 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+    @user     = User.find(params[:user_id])
+    @project  = @user.projects.find(params[:id])
   end
 
   # POST /projects
@@ -43,9 +45,11 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
+    @user     = User.find(params[:user_id])
+    @project  = @user.projects.find(params[:id])
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
+        format.html { redirect_to [@user, @project], notice: 'Project was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -57,9 +61,11 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
+    @user     = User.find(params[:user_id])
+    @project  = @user.projects.find(params[:id])
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url }
+      format.html { redirect_to user_projects_path(@user) }
       format.json { head :no_content }
     end
   end
