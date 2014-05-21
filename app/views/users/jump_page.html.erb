@@ -5,8 +5,8 @@
   <div class="large-6 column">
     <h2>Projects</h2>
     <%= render 'partial/map_projects/list_view' %>
+    <%= link_to  'Create a new project', [:new, :project], class: 'large-12 button' %>
   </div>
-  <%= link_to  'Create a new project', [:new, @user, :project] %>
   <div class="large-6 column">
     <h2>Account</h2>
     <%= render 'devise/display/profile_short' %>

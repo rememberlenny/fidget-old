@@ -1,4 +1,4 @@
-<table>
+<table class="large-12">
   <thead>
     <tr>
       <th>Name</th>
@@ -9,7 +9,7 @@
   <tbody>
     <tr>
       <td>
-        <%= link_to user_project_path(@user, project) do %>
+        <%= link_to project_path(@user, project) do %>
           <h3>
             <%= project.name %>
           </h3>
