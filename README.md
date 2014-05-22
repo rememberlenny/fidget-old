@@ -2,9 +2,9 @@
 
 #tanqueray: Real-time Collaborative Maps
 
-Repository: https://github.com/rememberlenny/map-track-rails
+Repository: https://github.com/rememberlenny/mapmade.io
 
-Current: http://tanqueray.herokuapp.com/pages/map_high
+Current: http://www.mapmade.io
 
 
 ##Description
