@@ -1,6 +1,6 @@
 <h1>Listing locations</h1>
 
-<%= form_tag [:user, :project, @location], :method => :get do %>
+<%= form_tag [:project, @location], :method => :get do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search Near", :name => nil %>
@@ -39,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New Location', new_location_path %>
+<%= link_to 'New Location', new_project_location_path(@project) %>

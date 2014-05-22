@@ -1,4 +1,4 @@
-<%= form_for(@location) do |f| %>
+<%= form_for([:project, @location]) do |f| %>
   <% if @location.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
