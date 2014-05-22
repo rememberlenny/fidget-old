@@ -7,14 +7,13 @@
   </p>
 <% end %>
 
-<table>
+<table class="large-12">
   <thead>
     <tr>
       <th>Id</th>
       <th>Address</th>
       <th>Latitude</th>
       <th>Longitude</th>
-      <th>Project_id</th>
       <th></th>
       <th></th>
       <th></th>
@@ -28,7 +27,6 @@
         <td><%= location.address %></td>
         <td><%= location.latitude %></td>
         <td><%= location.longitude %></td>
-        <td><%= location.project_id %></td>
         <td><%= link_to 'Show', project_location_path(@project, location) %></td>
         <td><%= link_to 'Edit', edit_project_location_path(@project, location) %></td>
         <td><%= link_to 'Destroy', [@project, @location], method: :delete, data: { confirm: 'Are you sure?' } %></td>

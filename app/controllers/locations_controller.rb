@@ -48,7 +48,9 @@ class LocationsController < ApplicationController
 
   # GET /locations/new
   def new
-    @location = Location.new
+    @user     = current_user
+    @project  = @user.projects.find(params[:project_id])
+    @location = @project.locations.new
   end
 
   # GET /locations/1/edit
