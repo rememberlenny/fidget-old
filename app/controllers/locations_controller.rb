@@ -41,6 +41,9 @@ class LocationsController < ApplicationController
   # GET /locations/1
   # GET /locations/1.json
   def show
+    @user     = current_user
+    @project  = @user.projects.find(params[:project_id])
+    @location = @project.locations.find(params[:id])
   end
 
   # GET /locations/new
@@ -50,16 +53,21 @@ class LocationsController < ApplicationController
 
   # GET /locations/1/edit
   def edit
+    @user     = current_user
+    @project  = @user.projects.find(params[:project_id])
+    @location = @project.locations.find(params[:id])
   end
 
   # POST /locations
   # POST /locations.json
   def create
-    @location = Location.new(location_params)
+    @user     = current_user
+    @project  = @user.projects.find(params[:project_id])
+    @location = @project.locations.new(location_params)
 
     respond_to do |format|
       if @location.save
-        format.html { redirect_to @location, notice: 'Location was successfully created.' }
+        format.html { redirect_to [@project, @location], notice: 'Location was successfully created.' }
         format.json { render action: 'show', status: :created, location: @location }
       else
         format.html { render action: 'new' }
@@ -71,9 +79,13 @@ class LocationsController < ApplicationController
   # PATCH/PUT /locations/1
   # PATCH/PUT /locations/1.json
   def update
+    @user     = current_user
+    @project  = @user.projects.find(params[:project_id])
+    @location = @project.locations.find(params[:id])
+
     respond_to do |format|
-      if @location.update(location_params)
-        format.html { redirect_to @location, notice: 'Location was successfully updated.' }
+      if @location.update_attributes(location_params)
+        format.html { redirect_to [@project, @location], notice: 'Location was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
