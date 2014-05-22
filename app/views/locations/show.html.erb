@@ -20,11 +20,6 @@
   <%= @location.longitude %>
 </p>
 
-<p>
-  <strong>Project_id:</strong>
-  <%= @location.project_id %>
-</p>
-
 <h3>Nearby Location</h3>
 <ul>
 <% for location in @location.nearbys(10) %>
