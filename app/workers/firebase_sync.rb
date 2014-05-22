@@ -1,7 +1,7 @@
-class FirebaseSyncWorker
-  include Sidekiq::FirebaseSyncWorker
+# class FirebaseSyncWorker
+#   include Sidekiq::FirebaseSyncWorker
 
-  def perform
+#   def perform
 
-  end
-end
+#   end
+# end
