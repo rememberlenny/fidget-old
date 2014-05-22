@@ -99,9 +99,12 @@ class LocationsController < ApplicationController
   # DELETE /locations/1
   # DELETE /locations/1.json
   def destroy
+    @user     = current_user
+    @project  = @user.projects.find(params[:project_id])
+    @location = @project.locations.find(params[:id])
     @location.destroy
     respond_to do |format|
-      format.html { redirect_to locations_url }
+      format.html { redirect_to project_locations_url }
       format.json { head :no_content }
     end
   end
@@ -109,7 +112,9 @@ class LocationsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_location
-      @location = Location.find(params[:id])
+      @user     = current_user
+      @project  = @user.projects.find(params[:project_id])
+      @location = @project.locations.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
