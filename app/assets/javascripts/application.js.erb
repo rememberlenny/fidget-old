@@ -25,6 +25,8 @@
 $(function(){ $(document).foundation(); });
 
 
+
+
 var mapApp = new MapApp;
 
 // @params for LocationPLot
@@ -36,7 +38,7 @@ var firebaseAppLocationInput = new LocationInput;
 var noticeApp = new NoticeApp;
 var addMapControls = new AddMapElement;
 
-mapApp.initialize();
+mapApp.initialize('map');
 firebaseAppLocationInput.initialize();
 firebaseAppLocationPlot.initialize(); //Dependent on firebaseAppLocationInput
 addMapControls.initialize();

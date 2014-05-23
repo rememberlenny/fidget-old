@@ -5,8 +5,8 @@ var MapApp = function(){
   this.allGeoJSON = [];
 }
 
-MapApp.prototype.initialize = function(){
-  this.loadMap();
+MapApp.prototype.initialize = function(map_el){
+  this.loadMap(map_el);
   this.mouseActions();
   this.tooltipBehavior();
 }
@@ -75,9 +75,9 @@ MapApp.prototype.saveMarkers = function(){
   }
 }
 
-MapApp.prototype.loadMap = function(){
+MapApp.prototype.loadMap = function(map_el){
     this.map = L.mapbox
-               .map('map', 'lkbgift.i30dhib8',  { zoomControl: false })
+               .map(map_el, 'lkbgift.i30dhib8',  { zoomControl: false })
                .setView([40.714623, -74.00663], 16);
 
 }
