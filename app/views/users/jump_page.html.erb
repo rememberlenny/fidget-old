@@ -8,6 +8,8 @@
   </div>
   <div class="large-6 column">
     <h2>Account</h2>
+    <%= text_field  'Search a topic', [:new, :project], class: 'large-12', placeholder: 'Search a topic' %>
+    <%= link_to  'Upload a new location', [:new, :project], class: 'large-12 button' %>
     <%= link_to  'Create a new project', [:new, :project], class: 'large-12 button' %>
     <%= render 'devise/display/profile_short' %>
   </div>
