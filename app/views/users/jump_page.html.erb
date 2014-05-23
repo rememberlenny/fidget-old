@@ -5,10 +5,10 @@
   <div class="large-6 column">
     <h2>Projects</h2>
     <%= render 'partial/map_projects/list_view' %>
-    <%= link_to  'Create a new project', [:new, :project], class: 'large-12 button' %>
   </div>
   <div class="large-6 column">
     <h2>Account</h2>
+    <%= link_to  'Create a new project', [:new, :project], class: 'large-12 button' %>
     <%= render 'devise/display/profile_short' %>
   </div>
 
