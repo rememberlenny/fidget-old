@@ -20,8 +20,8 @@
           <% end %>
         </td>
         <td class="text-center"><%= project.locations.count %></td>
-        <td><%= link_to 'Show', project_path(@user, project)  %></td>
-        <td><%= link_to 'Edit', edit_project_path(@user, project) %></td>
+        <td><%= link_to 'Show', project_path(project)  %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
     </tr>
   </tbody>
   <% end %>
