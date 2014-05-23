@@ -43,3 +43,10 @@
   </div>
 
 </div>
+
+<% content_for :footer_js do %>
+  <script>
+      var userMapApp = new MapApp;
+      userMapApp.initialize('current-map');
+  </script>
+<% end %>
