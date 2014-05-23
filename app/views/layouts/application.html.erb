@@ -13,7 +13,7 @@
     <%#= render 'partial/analytics/segmentio' %>
   </head>
 
-  <body class="<%= body_css %>">
+  <body class="<%= body_css %> <%= yield :body_css %>">
 
     <div class="off-canvas-wrap" data-offcanvas>
       <div class="inner-wrap">
