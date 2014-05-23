@@ -1,0 +1,19 @@
+.detail-content{
+  float: left;
+  width: 100%;
+  margin-left: -50px;
+  border-bottom: #333 solid 2px;
+  border-right: #333 solid 2px;
+  border-left: #333 solid 2px;
+  border-top: #333 solid 2px;
+  .inner-content{
+    margin-left: 50px;
+    border-left: #333 solid 2px;
+    background: #efefef;
+  }
+}
+.master-nav{
+  height: 100%;
+  width: 50px;
+  float: left
+}

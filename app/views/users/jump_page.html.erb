@@ -1,18 +1,31 @@
 <div class="row">
-  <div class="large-12">
-    <%= image_tag 'placeholder/map-wide.png' %>
+  <div class="left-nav master-nav">
+    <div class="nav-content text-center">
+      <h1>+</h1>
+      <h1>+</h1>
+      <h1>+</h1>
+      <h1>+</h1>
+    </div>
   </div>
+  <div class="detail-content">
+    <div class="inner-content">
+      <div class="large-12 column">
+        <%= image_tag 'placeholder/map-wide.png' %>
+      </div>
 
-  <div class="large-6 column">
-    <h2>Projects</h2>
-    <%= render 'partial/map_projects/list_view' %>
-  </div>
-  <div class="large-6 column">
-    <h2>Account</h2>
-    <%= text_field  'Search a topic', [:new, :project], class: 'large-12', placeholder: 'Search a topic' %>
-    <%= link_to  'Upload a new location', [:new, :project], class: 'large-12 button' %>
-    <%= link_to  'Create a new project', [:new, :project], class: 'large-12 button' %>
-    <%= render 'devise/display/profile_short' %>
+      <div class="large-6 column">
+        <h2>Projects</h2>
+        <%= render 'partial/map_projects/list_view' %>
+      </div>
+      <div class="large-6 column">
+        <h2>Account</h2>
+        <%= text_field  'Search a topic', [:new, :project], class: 'large-12', placeholder: 'Search a topic' %>
+        <%= link_to  'Upload a new location', [:new, :project], class: 'large-12 button' %>
+        <%= link_to  'Create a new project', [:new, :project], class: 'large-12 button' %>
+        <%= render 'devise/display/profile_short' %>
+      </div>
+      <div class="clearfix"></div>
+    </div>
   </div>
 
 </div>
