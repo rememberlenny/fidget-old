@@ -43,12 +43,13 @@
 <%= link_to  'Create a new project', [:new, :project], class: 'large-12 button' %>
 <%= render 'devise/display/profile_short' %>
 
+<!-- How to seperate this out? -->
 <% content_for :footer_js do %>
   <script>
-
     mapApp.initialize('current-map');
     <% @locations.each do |location| %>
-    mapApp.createMarker('<%= location.longitude %>', '<%= location.latitude %>', '', true);
+    mapApp.createMarker(<%= location.longitude %>, <%= location.latitude %>, '', true);
     <% end %>
   </script>
 <% end %>
+<!-- /How to seperate this out? -->

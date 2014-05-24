@@ -38,3 +38,13 @@
 <br>
 
 <%= link_to 'New Location', new_project_location_path(@project) %>
+
+
+<% content_for :footer_js do %>
+  <script>
+    mapApp.initialize('current-map');
+    <% @locations.each do |location| %>
+    mapApp.createMarker(<%= location.longitude %>, <%= location.latitude %>, '', true);
+    <% end %>
+  </script>
+<% end %>
