@@ -15,82 +15,33 @@
   </head>
   <% content_for( :body_css, 'dash' ) %>
   <body class="<%= body_css %> <%= yield :body_css %>">
-
-    <div class="off-canvas-wrap" data-offcanvas>
-      <div class="inner-wrap">
-        <%= render "partial/global/topnav" %>
-
-        <%= render "partial/global/off_canvas_left" %>
-        <%= render "partial/global/off_canvas_right" %>
-        <%= render "partial/global/notice_bar" %>
-        <%= render "partial/global/notification_window" %>
-
-        <%= render "partial/global/submit_to_db" %>
-
-        <%= yield :callout_module %>
-        <div class="large-12 container window-height">
-        <% content_for( :body_css, 'dash' ) %>
-
-
-<div class="x">
-  <div class="">
-      <div class="large-6 column top-to-bottom padding-remove">
-        <div id="current-map">
-        </div>
-      </div>
-      <div class="large-offset-6 large-6 column padding-remove window-height">
-
-        <div class="right-content detail-content">
-          <div class="inner-content">
-            <%= yield %>
-            <div class="clearfix"></div>
+    <%= render 'partial/global/precontent' %>
+      <div class="x">
+        <div class="">
+          <div class="large-6 column top-to-bottom padding-remove">
+            <div id="current-map"></div>
           </div>
-        </div>
-        <div class="left-nav master-nav">
-          <div class="nav-content text-center">
-            <%= link_to :back do %>
-              <h1><%= image_tag 'icons/back.png' %></h1>
-            <% end %>
-            <h1>+</h1>
-            <h1>+</h1>
-            <h1>+</h1>
+          <div class="large-offset-6 large-6 column padding-remove window-height">
+            <div class="right-content detail-content">
+              <div class="inner-content">
+                <%= yield %>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <div class="left-nav master-nav">
+              <div class="nav-content text-center">
+                <%= link_to :back do %>
+                  <h1><%= image_tag 'icons/back.png' %></h1>
+                <% end %>
+                <h1>+</h1>
+                <h1>+</h1>
+                <h1>+</h1>
+              </div>
+            </div>
           </div>
+          <div class="clearfix"></div>
         </div>
       </div>
-      <div class="clearfix"></div>
-  </div>
-
-</div>
-
-<% content_for :footer_js do %>
-  <script>
-      var userMapApp = new MapApp;
-      userMapApp.initialize('current-map');
-  </script>
-<% end %>
-
-          <%= render "partial/global/footer" %>
-        </div>
-
-
-      <!-- close the off-canvas menu -->
-      <a class="exit-off-canvas"></a>
-      </div>
-    </div>
-
-    <script>
-      <% if current_user %>
-        analytics.identify('current_user.id', {
-            email   : 'current_user.email',
-            name    : 'current_user.name'
-        });
-      <% end %>
-    </script>
-
-    <%= javascript_include_tag "application" %>
-
-    <%= yield :footer_js %>
-    <%= yield :post_script %>
-
+    <%= render 'partial/global/postcontent' %>
   </body>
 </html>

@@ -1,0 +1,24 @@
+      <% content_for :footer_js do %>
+        <script>
+            var userMapApp = new MapApp;
+            userMapApp.initialize('current-map');
+        </script>
+      <% end %>
+      <%= render "partial/global/footer" %>
+    </div><!-- /.container -->
+  <a class="exit-off-canvas"></a>
+  </div><!-- /.inner-wrap -->
+</div><!-- /.offcanvas-wrap -->
+
+<% if current_user %>
+  <script>
+      analytics.identify('current_user.id', {
+          email   : 'current_user.email',
+          name    : 'current_user.name'
+      });
+  </script>
+<% end %>
+
+<%= javascript_include_tag "application" %>
+<%= yield :footer_js %>
+<%= yield :post_script %>
