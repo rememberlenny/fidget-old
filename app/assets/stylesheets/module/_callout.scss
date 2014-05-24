@@ -1,0 +1,13 @@
+.callout.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 30%;
+  height: 14em;
+  background: rgb(255, 255, 255);
+  z-index: 1000;
+  padding-top: 2em;
+}

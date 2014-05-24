@@ -26,6 +26,7 @@
 
         <%= render "partial/global/submit_to_db" %>
 
+        <%= yield :callout_module %>
         <div class="large-12 container">
         <% content_for( :body_css, 'dash' ) %>
 
