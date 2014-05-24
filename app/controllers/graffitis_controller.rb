@@ -7,6 +7,11 @@ class GraffitisController < ApplicationController
     @graffitis = Graffiti.all
   end
 
+  def import
+    Graffiti.import(params[:file])
+    redirect_to root_url, notice: "Products imported."
+  end
+
   # GET /graffitis/1
   # GET /graffitis/1.json
   def show
