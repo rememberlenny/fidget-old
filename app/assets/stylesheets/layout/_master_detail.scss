@@ -17,6 +17,9 @@
 }
 .master-nav{
   .nav-content{
+    background: white;
+    border-left: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
     height: 100%;
     width: 50px;
     float: right;
@@ -31,6 +34,7 @@
 
 
 .top-to-bottom{
+  margin-left: 50px;
   position: absolute;
   height: 100%;
   #current-map{
