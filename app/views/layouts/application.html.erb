@@ -33,7 +33,6 @@
 
 <div class="x">
   <div class="">
-    <div class="inner-content">
       <div class="large-6 column top-to-bottom">
         <div id="current-map">
           <%= image_tag 'placeholder/map-wide.png' %>
@@ -51,12 +50,13 @@
           </div>
         </div>
         <div class="right-content detail-content">
-          <%= yield %>
+          <div class="inner-content">
+            <%= yield %>
+          </div>
           <div class="clearfix"></div>
         </div>
       </div>
       <div class="clearfix"></div>
-    </div>
   </div>
 
 </div>

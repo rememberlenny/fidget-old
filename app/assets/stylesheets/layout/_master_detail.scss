@@ -1,11 +1,7 @@
 @import '../base/variables';
 
-.right-content{
-  padding-left: 50px;
-}
 
 .detail-content{
-  float: left;
   width: 100%;
   margin-left: -50px;
   border-bottom: #333 solid 2px;
@@ -13,6 +9,7 @@
   border-left: #333 solid 2px;
   border-top: #333 solid 2px;
   .inner-content{
+    float: left;
     margin-left: 50px;
     border-left: #333 solid 2px;
     background: #efefef;
