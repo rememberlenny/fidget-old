@@ -9,6 +9,7 @@ MapTrackRails::Application.routes.draw do
 
   resources :graffitis do
     collection { post :import }
+    get 'page/:page', :action => :index, :on => :collection
   end
 
   resources :projects do
