@@ -21,6 +21,8 @@ This uses Mapbox and Firebase.
 - add interval to event to add new tag
 - create search for current tags
 
+- create map fullscreen button (hide right column)
+- create click events on map to create new project/location
 - allow users to share link
 - create guest account access
 - create hook to google docs [with rails](https://developers.google.com/gdata/articles/gdata_on_rails)
