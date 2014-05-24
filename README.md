@@ -21,6 +21,8 @@ This uses Mapbox and Firebase.
 - add interval to event to add new tag
 - create search for current tags
 
+- allow users to share link
+- create guest account access
 - create hook to google docs [with rails](https://developers.google.com/gdata/articles/gdata_on_rails)
 - create faceted filter for displayed tags
   - [Filtering Markers](https://www.mapbox.com/mapbox.js/example/v1.0.0/filtering-markers/)
