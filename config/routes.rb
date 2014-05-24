@@ -17,6 +17,7 @@ MapTrackRails::Application.routes.draw do
 
   get "pages/map_high"
   get "pages/home"
+  get "pages/privacy"
   get "pages/about"
   get "pages/contact"
   get "pages/download"
