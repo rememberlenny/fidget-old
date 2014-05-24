@@ -1,6 +1,6 @@
-<ul class="right no-bullet">
+<ul class="right no-bullet top-nav-bar">
   <% if user_signed_in? %>
-    <li><a href="">Logged in as <strong><%= current_user.email %></strong>.</a></li>
+    <li><a href=""><% if current_user.image %><img class="user-image" src="<%= current_user.image %>"><% end %> Logged in as <strong><%= current_user.email %></strong>.</a></li>
     <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
     <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
   <% else %>
