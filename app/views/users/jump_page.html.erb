@@ -45,10 +45,10 @@
 
 <% content_for :footer_js do %>
   <script>
-    var userMapApp = new MapApp;
-    userMapApp.initialize('current-map');
+
+    mapApp.initialize('current-map');
     <% @locations.each do |location| %>
-    userMapApp.createMarker(<%= location.longitude %>, <%= location.latitude %>, '', true);
+    mapApp.createMarker('<%= location.longitude %>', '<%= location.latitude %>', '', true);
     <% end %>
   </script>
 <% end %>
