@@ -17,3 +17,19 @@
   width: 50px;
   float: left
 }
+
+.dash{
+  .row{
+    max-width: 100%;
+  }
+}
+
+
+.top-to-bottom{
+  position: absolute;
+  height: 100%;
+  padding-bottom: $footer-height;
+  #current-map{
+    height: 100%;
+  }
+}

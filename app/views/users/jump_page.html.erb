@@ -12,17 +12,40 @@
   </div>
   <div class="detail-content">
     <div class="inner-content">
-      <div class="large-12 column">
+      <div class="large-6 column top-to-bottom">
         <div id="current-map">
           <%= image_tag 'placeholder/map-wide.png' %>
         </div>
       </div>
-
-      <div class="large-6 column">
-        <h2>Projects</h2>
+      <div class="large-offset-6 large-6 column">
         <%= render 'partial/map_projects/list_view' %>
-      </div>
-      <div class="large-6 column">
+        <table class="large-12">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Count</th>
+              <th>Show</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <% @projects.each do |project| %>
+          <tbody>
+            <tr>
+                <td>
+                  <%= link_to project_path(project) do %>
+                    <h3>
+                      <%= project.name %>
+                    </h3>
+                  <% end %>
+                </td>
+                <td class="text-center"><%= project.locations.count %></td>
+                <td><%= link_to 'Show', project_path(project)  %></td>
+                <td><%= link_to 'Edit', edit_project_path(project) %></td>
+            </tr>
+          </tbody>
+          <% end %>
+        </table>
+
         <h2>Following</h2>
         <%= text_field  'Search a topic', [:new, :project], class: 'large-12', placeholder: 'Search a topic' %>
         <div class="row">
