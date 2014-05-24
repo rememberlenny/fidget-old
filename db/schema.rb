@@ -16,6 +16,17 @@ ActiveRecord::Schema.define(version: 201405191004406) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "graffitis", force: true do |t|
+    t.string   "image_id"
+    t.string   "image_url"
+    t.string   "user"
+    t.string   "source"
+    t.string   "date_published"
+    t.string   "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "locations", force: true do |t|
     t.string   "address"
     t.float    "latitude"
