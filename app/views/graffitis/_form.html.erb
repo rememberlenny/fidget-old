@@ -1,0 +1,41 @@
+<%= form_for(@graffiti) do |f| %>
+  <% if @graffiti.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@graffiti.errors.count, "error") %> prohibited this graffiti from being saved:</h2>
+
+      <ul>
+      <% @graffiti.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image_id %><br>
+    <%= f.text_field :image_id %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br>
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :date_published %><br>
+    <%= f.text_field :date_published %>
+  </div>
+  <div class="field">
+    <%= f.label :post_id %><br>
+    <%= f.text_field :post_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

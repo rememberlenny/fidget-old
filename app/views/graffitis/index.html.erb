@@ -1,0 +1,37 @@
+<h1>Listing graffitis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Image url</th>
+      <th>User</th>
+      <th>Source</th>
+      <th>Date published</th>
+      <th>Post</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @graffitis.each do |graffiti| %>
+      <tr>
+        <td><%= graffiti.image_id %></td>
+        <td><%= graffiti.image_url %></td>
+        <td><%= graffiti.user %></td>
+        <td><%= graffiti.source %></td>
+        <td><%= graffiti.date_published %></td>
+        <td><%= graffiti.post_id %></td>
+        <td><%= link_to 'Show', graffiti %></td>
+        <td><%= link_to 'Edit', edit_graffiti_path(graffiti) %></td>
+        <td><%= link_to 'Destroy', graffiti, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Graffiti', new_graffiti_path %>

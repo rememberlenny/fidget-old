@@ -1,13 +1,18 @@
 MapTrackRails::Application.routes.draw do
 
 
-  get "graffiti/index"
+  resources :graffitis
+
   devise_for :users,  path_names: {sign_in: "login", sign_out: "logout"},
                       controllers: {
                         :omniauth_callbacks => "omniauth_callbacks"
                       }
 
   resources :users
+
+  resources :graffitis do
+    collection { post :import }
+  end
 
   resources :projects do
     resources :locations
