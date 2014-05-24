@@ -32,7 +32,7 @@
 
 
 <div class="x">
-  <div class="detail-content">
+  <div class="">
     <div class="inner-content">
       <div class="large-6 column top-to-bottom">
         <div id="current-map">
@@ -42,13 +42,18 @@
       <div class="large-offset-6 large-6 column">
         <div class="left-nav master-nav">
           <div class="nav-content text-center">
-            <h1>+</h1>
+            <%= link_to :back do %>
+              <h1><%= image_tag 'icons/back.png' %></h1>
+            <% end %>
             <h1>+</h1>
             <h1>+</h1>
             <h1>+</h1>
           </div>
         </div>
-        <%= yield %>
+        <div class="right-content detail-content">
+          <%= yield %>
+          <div class="clearfix"></div>
+        </div>
       </div>
       <div class="clearfix"></div>
     </div>
