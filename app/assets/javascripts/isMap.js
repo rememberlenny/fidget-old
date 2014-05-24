@@ -41,8 +41,8 @@ mapApp = {
     }
   },
   innerWrapWindowDefine: function(){
+    var self = this;
     if($('body').hasClass('app-mode')){
-      var self = this;
       var isWindowNotZero = ($(window).height() > 0);
       var isInnerNotZero  = ($('.inner-wrap').height() > 0);
       if( isInnerNotZero && isWindowNotZero ){

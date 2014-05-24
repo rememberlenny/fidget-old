@@ -1,3 +1,5 @@
+@import '../base/variables';
+
 .detail-content{
   float: left;
   width: 100%;
@@ -28,7 +30,6 @@
 .top-to-bottom{
   position: absolute;
   height: 100%;
-  padding-bottom: $footer-height;
   #current-map{
     height: 100%;
   }

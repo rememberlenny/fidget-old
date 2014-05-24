@@ -25,7 +25,7 @@
 $(function(){ $(document).foundation(); });
 
 
-var mapApp = new MapApp;
+// var mapApp = new MapApp;
 
 // @params for LocationPLot
 // project_id: ID of the project,
@@ -36,7 +36,11 @@ var firebaseAppLocationInput = new LocationInput;
 var noticeApp = new NoticeApp;
 var addMapControls = new AddMapElement;
 
-mapApp.initialize('map');
-firebaseAppLocationInput.initialize();
-firebaseAppLocationPlot.initialize(); //Dependent on firebaseAppLocationInput
-addMapControls.initialize();
+// mapApp.initialize('map');
+// firebaseAppLocationInput.initialize();
+// firebaseAppLocationPlot.initialize(); //Dependent on firebaseAppLocationInput
+// addMapControls.initialize();
+
+
+var container_height = $(window).height()-$('.tab-bar').height();
+$('.container').height(container_height);
