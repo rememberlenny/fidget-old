@@ -29,15 +29,6 @@
 </table>
 
 <%= text_field  'Search a topic', [:new, :project], class: 'large-12', placeholder: 'Search a topic' %>
-<div class="row">
-  <div class="large-6 column">
-    <h3><a>Watching: 12</a></h3>
-  </div>
-  <div class="large-6 column">
-    <h3><a>Watched: 98</a></h3>
-  </div>
-</div>
-<h2>Account</h2>
 <%= link_to  'Upload a new location', [:new, :project], class: 'large-12 button' %>
 <%= link_to  'Create a new project', [:new, :project], class: 'large-12 button' %>
 <%= link_to 'View settings', user_path, class: 'large-12 button secondary' %>
