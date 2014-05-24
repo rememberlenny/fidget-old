@@ -12,6 +12,7 @@ gem 'mapbox-rails'
 
 gem 'geocoder'
 gem 'roo'
+gem 'iconv', '~> 1.0.3'
 
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
