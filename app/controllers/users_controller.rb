@@ -15,6 +15,10 @@ class UsersController < ApplicationController
   def show
     u = current_user
     @projects = u.projects.where(user_id: current_user.id)
+    @locations = []
+    @projects.each do |project|
+      @locations.push *project.locations.all
+    end
     render 'jump_page'
   end
 
