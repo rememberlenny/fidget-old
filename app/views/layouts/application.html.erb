@@ -11,6 +11,7 @@
     <%= csrf_meta_tags %>
     <script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
     <%#= render 'partial/analytics/segmentio' %>
+    <%= render 'partial/global/window_height' %>
   </head>
   <% content_for( :body_css, 'dash' ) %>
   <body class="<%= body_css %> <%= yield :body_css %>">
