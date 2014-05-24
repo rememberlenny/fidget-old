@@ -6,8 +6,7 @@ MapTrackRails::Application.routes.draw do
                         :omniauth_callbacks => "omniauth_callbacks"
                       }
 
-  resources :users 
-  
+
   resources :projects do
     resources :locations
   end
