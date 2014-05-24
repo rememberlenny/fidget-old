@@ -1,4 +1,5 @@
 class Graffiti < ActiveRecord::Base
+  paginates_per 50
 
   def self.import(file)
     spreadsheet = open_spreadsheet(file)
