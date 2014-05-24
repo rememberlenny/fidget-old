@@ -11,6 +11,7 @@ gem 'foundation-rails'
 gem 'mapbox-rails'
 
 gem 'geocoder'
+gem 'roo'
 
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
