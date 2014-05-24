@@ -28,7 +28,6 @@
   <% end %>
 </table>
 
-<h2>Following</h2>
 <%= text_field  'Search a topic', [:new, :project], class: 'large-12', placeholder: 'Search a topic' %>
 <div class="row">
   <div class="large-6 column">
@@ -41,7 +40,7 @@
 <h2>Account</h2>
 <%= link_to  'Upload a new location', [:new, :project], class: 'large-12 button' %>
 <%= link_to  'Create a new project', [:new, :project], class: 'large-12 button' %>
-<%= render 'devise/display/profile_short' %>
+<%= link_to 'View settings', user_path, class: 'large-12 button secondary' %>
 
 <!-- How to seperate this out? -->
 <% content_for :footer_js do %>
