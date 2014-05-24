@@ -86,6 +86,9 @@ GEM
     json (1.8.1)
     jwt (0.1.13)
       multi_json (>= 1.5)
+    kaminari (0.15.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     koala (1.8.0)
       addressable
       faraday
@@ -216,6 +219,7 @@ DEPENDENCIES
   iconv (~> 1.0.3)
   jbuilder (~> 1.2)
   jquery-rails
+  kaminari
   koala (~> 1.8.0rc1)
   mapbox-rails
   meta_request

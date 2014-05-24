@@ -16,6 +16,7 @@ gem 'iconv', '~> 1.0.3'
 
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'kaminari'
 
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
