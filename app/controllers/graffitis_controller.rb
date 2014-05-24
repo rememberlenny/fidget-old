@@ -4,7 +4,7 @@ class GraffitisController < ApplicationController
   # GET /graffitis
   # GET /graffitis.json
   def index
-    @graffitis = Graffiti.all.page params[:page]
+    @graffitis = Graffiti.order("id").page(params[:page]).per(5)
   end
 
   def import
