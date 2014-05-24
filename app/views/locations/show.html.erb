@@ -30,3 +30,10 @@
 <%= link_to 'Edit', edit_project_location_path(@project, @location) %> |
 <%= link_to 'Back', project_path(@project) %>
 
+
+<% content_for :footer_js do %>
+  <script>
+    mapApp.initialize('current-map');
+    mapApp.createMarker(<%= @location.longitude %>, <%= @location.latitude %>, '', true);
+  </script>
+<% end %>
