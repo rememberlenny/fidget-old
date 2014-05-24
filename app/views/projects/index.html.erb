@@ -5,9 +5,7 @@
   <table class="large-12">
     <thead>
       <tr>
-        <th>Id</th>
         <th>Name</th>
-        <th>User</th>
         <th></th>
         <th></th>
         <th></th>
@@ -17,11 +15,9 @@
     <tbody>
       <% @projects.each do |project| %>
         <tr>
-          <td><%= project.id %></td>
           <td><%= project.name %></td>
-          <td><%= project.user_id %></td>
-          <td><%= link_to 'Show', project_path(@user, project)  %></td>
-          <td><%= link_to 'Edit', edit_project_path(@user, project) %></td>
+          <td><%= link_to 'Show', project_path(project)  %></td>
+          <td><%= link_to 'Edit', edit_project_path(project) %></td>
           <td><%= link_to 'Destroy', [project], data: { confirm: 'Are you sure?' }, method: :delete %></td>
         </tr>
       <% end %>
