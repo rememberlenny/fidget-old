@@ -16,6 +16,12 @@ ActiveRecord::Schema.define(version: 201405191004406) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "delayed_jobs", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "queue"
+  end
+
   create_table "graffitis", force: true do |t|
     t.string   "image_id"
     t.string   "image_url"
