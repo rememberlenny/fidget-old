@@ -19,4 +19,7 @@ class PagesController < ApplicationController
 
   def map_high
   end
+
+  def pay
+  end
 end
