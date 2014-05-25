@@ -44,5 +44,9 @@ This uses Mapbox and Firebase.
   - ENV['FB_APP_ID_MM']
   - ENV['FB_APP_SECRET_MM']
 
+- stripe.rb
+  - ENV['STRIPE_PUBLISHABLE_KEY']
+  - ENV['STRIPE_SECRET_KEY']
+
 - analytics_ruby.rb
   - ENV['SEGMENT_IO_MAPMADE']
