@@ -16,6 +16,7 @@ MapTrackRails::Application.routes.draw do
     resources :locations
   end
 
+  resources :charges
 
   root 'pages#home'
 

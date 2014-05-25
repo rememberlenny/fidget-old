@@ -14,6 +14,8 @@ gem 'geocoder'
 gem 'roo'
 gem 'iconv', '~> 1.0.3'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'kaminari'
