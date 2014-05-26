@@ -20,6 +20,22 @@
   <%= @location.longitude %>
 </p>
 
+<p>
+  <strong>Start:</strong>
+  <% if @location.startdate %>
+    <%= @location.startdate %>
+  <% end %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <% if @location.enddate %>
+    <%= @location.enddate %>
+  <% end %>
+</p>
+
+
+
 <h3>Nearby Location</h3>
 <ul>
 <% for location in @location.nearbys(10) %>
