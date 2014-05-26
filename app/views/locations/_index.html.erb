@@ -14,6 +14,8 @@
       <th>Address</th>
       <th>Latitude</th>
       <th>Longitude</th>
+      <th>Start</th>
+      <th>End</th>
       <th></th>
       <th></th>
       <th></th>
@@ -27,6 +29,8 @@
         <td><%= location.address %></td>
         <td><%= location.latitude %></td>
         <td><%= location.longitude %></td>
+        <td><%= location.start_time %></td>
+        <td><%= location.end_time %></td>
         <td><%= link_to 'Show', project_location_path(@project, location) %></td>
         <td><%= link_to 'Edit', edit_project_location_path(@project, location) %></td>
         <td><%= link_to 'Destroy', [@project, location], method: :delete, data: { confirm: 'Are you sure?' } %></td>
