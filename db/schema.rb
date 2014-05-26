@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 201405191004406) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "project_id"
+    t.string   "start_time"
+    t.string   "end_time"
   end
 
   create_table "map_projects", force: true do |t|
