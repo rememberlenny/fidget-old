@@ -9,12 +9,16 @@ gem 'uglifier', '>= 1.3.0'
 gem 'handlebars_assets'
 gem 'foundation-rails'
 gem 'mapbox-rails'
+group :assets do
+  gem 'jquery-fileupload-rails'
+end
 
 gem 'resque', :require => "resque/server"
 gem 'geocoder'
 gem 'roo'
 gem 'smarter_csv'
 gem 'iconv', '~> 1.0.3'
+
 
 gem 'delayed_job_active_record'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
