@@ -1,6 +1,6 @@
 class Graffiti < ActiveRecord::Base
   def self.import(file)
-    @file = file.read
+    @file = file.tempfile
     SmarterCSV.process(@file, :chunk_size => 50000) do |chunk|
       chunk.each do |row|
         row = row.slice(:image_id, :image_url, :user,  :date_published,  :post_id)
