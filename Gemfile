@@ -10,6 +10,7 @@ gem 'handlebars_assets'
 gem 'foundation-rails'
 gem 'mapbox-rails'
 
+gem 'resque', :require => "resque/server"
 gem 'geocoder'
 gem 'roo'
 gem 'smarter_csv'
