@@ -9,7 +9,7 @@ class Graffiti < ActiveRecord::Base
         :date_published =>:date_published,
         :post_id        =>:post_id
       }}) do |chunk|
-      chunk.each do |row|
+      chunk.find_each do |row|
         Graffiti.create(row)
       end
     end
