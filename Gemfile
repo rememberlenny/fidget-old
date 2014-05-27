@@ -21,8 +21,6 @@ gem 'roo'
 gem 'smarter_csv'
 gem 'iconv', '~> 1.0.3'
 
-
-# gem 'delayed_job_active_record'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem 'turbolinks'
@@ -33,13 +31,13 @@ gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem 'rails_12factor'
 gem "koala", "~> 1.8.0rc1"
-# gem 'delayed_job_active_record'
+gem 'delayed_job_active_record'
 gem 'devise'
 
 gem 'newrelic_rpm'
 gem 'analytics-ruby', '~>1.0'
 
-# gem 'sidekiq'
+gem 'sidekiq'
 
 group :development do
   gem 'better_errors'
