@@ -9,7 +9,7 @@ class GraffitisController < ApplicationController
 
   def import
     Graffiti.import(params[:file])
-    redirect_to root_url, notice: "Products imported."
+    redirect_to graffitis_path, notice: "Graffiti images imported."
   end
 
   # GET /graffitis/1
