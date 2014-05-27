@@ -1,24 +1,11 @@
 class Graffiti < ActiveRecord::Base
-
   def self.import(file)
-    allowed_attributes = [ "image_id", "image_url", "user",  "date_published",  "post_id"]
-    spreadsheet = open_spreadsheet(file)
-    header = spreadsheet.row(1)
-    (2..spreadsheet.last_row).each do |i|
-      row = Hash[[header, spreadsheet.row(i)].transpose]
-      product = find_by_id(row["id"]) || new
-      product.attributes = row.to_hash.select { |k,v| allowed_attributes.include? k }
-      product.save!
+    SmarterCSV.process(file, :chunk_size => 50000) do |chunk|
+      chunk.each do |row|
+        row = row.slice(:image_id, :image_url, :user,  :date_published,  :post_id)
+        row.values.each { |f| f.gsub!(/\"/, '') }
+        Graffiti.create(row)
+      end
     end
   end
-
-  def self.open_spreadsheet(file)
-    case File.extname(file.original_filename)
-    when ".csv" then Roo::CSV.new(file.path)
-    when ".xls" then Roo::Excel.new(file.path)
-    when ".xlsx" then Roo::Excelx.new(file.path)
-    else raise "Unknown file type: #{file.original_filename}"
-    end
-  end
-
 end
