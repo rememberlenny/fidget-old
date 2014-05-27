@@ -12,6 +12,7 @@ gem 'mapbox-rails'
 
 gem 'geocoder'
 gem 'roo'
+gem 'smarter_csv'
 gem 'iconv', '~> 1.0.3'
 
 gem 'delayed_job_active_record'
