@@ -26,7 +26,7 @@
     <% @graffitis.each do |graffiti| %>
       <tr>
         <td><%= graffiti.image_id %></td>
-        <td><%= graffiti.image_url %></td>
+        <td><img src="<%= graffiti.image_url %>" style="max-height:200px;"></td>
         <td><%= graffiti.user %></td>
         <td><%= graffiti.source %></td>
         <td><%= graffiti.date_published %></td>
