@@ -15,7 +15,7 @@ end
 
 gem "rmagick"
 gem "carrierwave"
-gem 'resque', :require => "resque/server"
+gem "resque", "~> 2.0.0.pre.1", github: "resque/resque"
 gem 'geocoder'
 gem 'roo'
 gem 'smarter_csv'
