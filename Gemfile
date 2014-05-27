@@ -13,6 +13,8 @@ group :assets do
   gem 'jquery-fileupload-rails'
 end
 
+gem "rmagick"
+gem "carrierwave"
 gem 'resque', :require => "resque/server"
 gem 'geocoder'
 gem 'roo'
