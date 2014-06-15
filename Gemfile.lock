@@ -208,6 +208,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sqlite3 (1.3.9)
     thor (0.19.1)
     thread_safe (0.3.3)
     tilt (1.4.1)
@@ -258,6 +259,7 @@ DEPENDENCIES
   sdoc
   sidekiq
   smarter_csv
+  sqlite3
   stripe!
   turbolinks
   uglifier (>= 1.3.0)
