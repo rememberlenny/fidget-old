@@ -43,10 +43,14 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
 end
 
 group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'pg'
