@@ -1,28 +1,36 @@
-<div class="hero-default large-12 image-back">
-  <div class="row">
-    <%= image_tag 'proto/mapmade.png' %>
-    <h1>Hero text</h1>
-    <h2>Hero description</h2>
-  </div>
+<% if user_signed_in? %>
 
+  <%= render 'dashboard/main' %>
+
+<% else %>
+
+  <div class="large-12 colum hero text-center ">
+    <h1>Highlight, filter, and identify relevant news</h1>
+    <h2 class="subheader">News aggregation designed and built for connected people</h2>
+    <%= link_to 'Sign up for free', new_user_registration_path, class: 'button small secondary radius large-3' %>
+    <p class="small">No credit card required</p>
+  </div>
+</div>
+<div class="white-bg large-12">
+  <div class="row hero-sub">
+    <div class="large-6 column hero-sub">
+        <h3>Scan headlines, intelligently.</h3>
+        <p>News Triangle provides you content filter based on your social networks. Integrate with every social services without worrying about compatability. Read news with your entire digital network by your side.</p>
+    </div>
+    <div class="large-6 column text-center">
+          <%= image_tag 'home-image.png', class: 'large-10' %>
+    </div>
+  </div>
   <div class="row">
-    <div class="large-4 column">
-      <h3>Point 1</h3>
+    <div class="large-6 column text-center">
+          <%= image_tag 'connections.png', class: 'large-6' %>
     </div>
-    <div class="large-4 column">
-      <h3>Point 2</h3>
-    </div>
-    <div class="large-4 column">
-      <h3>Point 3</h3>
+    <div class="large-6 column">
+      <h3>Keep in touch, doing what you do.</h3>
+      <p class=" hero-sub">Reaching out to your digital community has never been easier. Read your news and get notified when someone relevant is involved. Reach out with good reason and keep tabs on everyone you know.</p>
     </div>
   </div>
 </div>
 
-<% content_for :callout_module do %>
-  <div class="callout overlay text-center">
-    <h2>Welcome!</h2>
-    <h4>Mapmade.io is still in development.</h4>
-    <hr>
-    Questions? <a href="mailto:lenny@atriangle.com">Contact</a>
-  </div>
+
 <% end %>
