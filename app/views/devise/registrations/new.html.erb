@@ -1,15 +1,26 @@
-<h2>Sign up</h2>
+<div class="row">
+  <div class="large-6 column">
+    <h2>Sign up</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+      <div><%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %></div>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+      <div><%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-<%= render "devise/shared/links" %>
+      <div><%= f.submit "Sign up", class: 'button  large-12' %></div>
+    <% end %>
+    <%= render "devise/shared/links" %>
+  </div>
+  <div class="large-6 column">
+    <h2>Connect</h2>
+    <%= render "devise/shared/social" %>
+  </div>
+</div>
+
