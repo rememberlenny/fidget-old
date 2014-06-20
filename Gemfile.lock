@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/stripe/stripe-ruby
-  revision: 56176b2539a3ba307c364363f171a3ebb64a164b
+  revision: bb9388384f8bade9cf257e5907679e7afaab85a6
   specs:
-    stripe (1.12.0)
+    stripe (1.14.0)
       json (~> 1.8.1)
       mime-types (~> 1.25)
       rest-client (~> 1.4)
@@ -34,24 +34,15 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    addressable (2.3.6)
-    analytics-ruby (1.1.0)
     arel (4.0.2)
-    bcrypt-ruby (3.1.2)
-    better_errors (0.9.0)
+    bcrypt (3.1.7)
+    better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.1.4)
     callsite (0.0.11)
-    carrierwave (0.10.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
-      mime-types (>= 1.16)
-    celluloid (0.15.2)
-      timers (~> 1.1.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -60,33 +51,27 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    connection_pool (2.0.0)
     debug_inspector (0.0.2)
-    delayed_job (4.0.1)
-      activesupport (>= 3.0, < 4.2)
-    delayed_job_active_record (4.0.1)
-      activerecord (>= 3.0, < 4.2)
-      delayed_job (>= 3.0, < 4.1)
-    devise (3.2.2)
-      bcrypt-ruby (~> 3.0)
+    devise (3.2.4)
+      bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
-    execjs (2.0.2)
+    execjs (2.2.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
-    foundation-rails (5.2.2.0)
+    foundation-rails (5.3.0.1)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
-    geocoder (1.1.8)
-    handlebars_assets (0.15)
+    geocoder (1.2.2)
+    handlebars_assets (0.16)
       execjs (>= 1.2.9)
       multi_json
       sprockets (>= 2.0.3)
       tilt
-    hashie (2.1.1)
+    hashie (2.1.2)
     hike (1.2.3)
     httpauth (0.2.1)
     i18n (0.6.9)
@@ -103,29 +88,18 @@ GEM
     json (1.8.1)
     jwt (0.1.13)
       multi_json (>= 1.5)
-    kaminari (0.15.1)
-      actionpack (>= 3.0.0)
-      activesupport (>= 3.0.0)
-    koala (1.8.0)
-      addressable
-      faraday
-      multi_json
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mapbox-rails (1.6.1.1)
-    meta_request (0.2.7)
+    meta_request (0.3.0)
       callsite
       rack-contrib
       railties
     mime-types (1.25.1)
-    mini_portile (0.6.0)
     minitest (4.7.5)
-    multi_json (1.10.0)
+    multi_json (1.10.1)
     multipart-post (2.0.0)
-    newrelic_rpm (3.7.1.182)
-    nokogiri (1.6.2.1)
-      mini_portile (= 0.6.0)
     oauth2 (0.8.1)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -141,8 +115,8 @@ GEM
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
     orm_adapter (0.5.0)
-    pg (0.17.0)
-    polyglot (0.3.4)
+    pg (0.17.1)
+    polyglot (0.3.5)
     rack (1.5.2)
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
@@ -166,21 +140,11 @@ GEM
       activesupport (= 4.0.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.3.1)
+    rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
-    redis (3.0.7)
-    redis-namespace (1.4.1)
-      redis (~> 3.0.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    rmagick (2.13.2)
-    roo (1.13.2)
-      nokogiri
-      rubyzip
-      spreadsheet (> 0.6.4)
-    ruby-ole (1.2.11.7)
-    rubyzip (1.1.3)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -190,15 +154,6 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
-    sidekiq (3.0.2)
-      celluloid (>= 0.15.2)
-      connection_pool (>= 2.0.0)
-      json
-      redis (>= 3.0.6)
-      redis-namespace (>= 1.3.1)
-    smarter_csv (1.0.17)
-    spreadsheet (0.9.7)
-      ruby-ole (>= 1.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -208,17 +163,17 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sqlite3 (1.3.9)
     thor (0.19.1)
-    thread_safe (0.3.3)
+    thread_safe (0.3.4)
     tilt (1.4.1)
-    timers (1.1.0)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
     turbolinks (2.2.2)
       coffee-rails
     tzinfo (0.3.39)
-    uglifier (2.5.0)
+    uglifier (2.5.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     warden (1.2.3)
@@ -228,12 +183,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  analytics-ruby (~> 1.0)
   better_errors
   binding_of_caller
-  carrierwave
   coffee-rails (~> 4.0.0)
-  delayed_job_active_record
   devise
   foundation-rails
   geocoder
@@ -242,22 +194,16 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-fileupload-rails
   jquery-rails
-  kaminari
-  koala (~> 1.8.0rc1)
   mapbox-rails
   meta_request
-  newrelic_rpm
   omniauth
   omniauth-facebook (= 1.4.0)
   pg
   rails (= 4.0.2)
   rails_12factor
-  rmagick
-  roo
   sass-rails (~> 4.0.0)
   sdoc
-  sidekiq
-  smarter_csv
+  sqlite3
   stripe!
   turbolinks
   uglifier (>= 1.3.0)

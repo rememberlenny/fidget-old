@@ -13,39 +13,29 @@ group :assets do
   gem 'jquery-fileupload-rails'
 end
 
-gem "rmagick"
-gem "carrierwave"
-# gem "resque", "~> 2.0.0.pre.1", github: "resque/resque"
 gem 'geocoder'
-gem 'roo'
-gem 'smarter_csv'
 gem 'iconv', '~> 1.0.3'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'kaminari'
 
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem 'rails_12factor'
-gem "koala", "~> 1.8.0rc1"
-gem 'delayed_job_active_record'
 gem 'devise'
-
-gem 'newrelic_rpm'
-gem 'analytics-ruby', '~>1.0'
-
-gem 'sidekiq'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
+  gem 'sqlite3'
 end
 
-gem 'pg'
+group :production do
+  gem 'pg'
+end
 
 group :doc do
   gem 'sdoc', require: false
