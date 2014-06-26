@@ -5,7 +5,7 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body{
+body.home{
   background-color: rgb(59, 47, 99);
   background-image: -webkit-radial-gradient(50% top, rgba(84, 90, 182, 0.6) 0%,rgba(84, 90, 182, 0) 75%),-webkit-radial-gradient(right top, rgb(121, 74, 162) 0%,rgba(121, 74, 162, 0) 57%);
   background-image: radial-gradient( at 50% top, rgba(84, 90, 182, 0.6) 0%,rgba(84, 90, 182, 0) 75%),radial-gradient( at right top, rgb(121, 74, 162) 0%,rgba(121, 74, 162, 0) 57%);
