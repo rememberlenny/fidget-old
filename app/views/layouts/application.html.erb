@@ -16,7 +16,7 @@
   <% content_for( :body_css, 'dash' ) %>
   <body class="<%= body_css %> <%= yield :body_css %>">
     <%= render 'partial/global/precontent' %>
-      <%= yield %>
+    <%= yield %>
     <%= render 'partial/global/postcontent' %>
   </body>
 </html>
