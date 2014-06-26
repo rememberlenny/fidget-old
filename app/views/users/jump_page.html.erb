@@ -1,32 +1,22 @@
 
 
 <%#= render 'partial/map_projects/list_view' %>
-<table class="large-12 row">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Count</th>
-      <th>Show</th>
-      <th>Edit</th>
-    </tr>
-  </thead>
+<div class="large-12 row">
+  <ul class="large-block-grid-2 medium-block-grid-2">
   <% @projects.each do |project| %>
-  <tbody>
-    <tr>
-        <td>
-          <%= link_to project_path(project) do %>
-            <h3>
-              <%= project.name %>
-            </h3>
-          <% end %>
-        </td>
-        <td class="text-center"><%= project.locations.count %></td>
-        <td><%= link_to 'Show', project_path(project)  %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    </tr>
-  </tbody>
+    <li>
+      <%= image_tag 'momuntain-lg.jpg' %>
+      <%= link_to project_path(project) do %>
+        <h3>
+          <%= project.name %>
+        </h3>
+      <% end %>
+      <%= link_to 'Show', project_path(project), class: 'button tiny large-6 medium-6 column'  %>
+      <%= link_to 'Edit', edit_project_path(project), class: 'button tiny secondary large-6 medium-6 column' %>
+    </li>
   <% end %>
-</table>
+  </ul>
+</div>
 
 <%= render 'partial/dash/actions' %>
 
