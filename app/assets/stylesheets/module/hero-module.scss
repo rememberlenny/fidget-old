@@ -1,0 +1,13 @@
+.hero-grid-item{
+  .feat-cent{
+    opacity: 0;
+  }
+  &:hover{
+    img{
+      opacity: .6;
+    }
+    .feat-cent{
+      opacity: 1;
+    }
+  }
+}
