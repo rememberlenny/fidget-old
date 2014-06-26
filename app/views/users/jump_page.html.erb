@@ -7,12 +7,14 @@
     <li>
       <%= image_tag 'momuntain-lg.jpg' %>
       <%= link_to project_path(project) do %>
-        <h3>
+        <h2  class="text-center">
           <%= project.name %>
-        </h3>
+        </h2>
       <% end %>
-      <%= link_to 'Show', project_path(project), class: 'button tiny large-6 medium-6 column'  %>
-      <%= link_to 'Edit', edit_project_path(project), class: 'button tiny secondary large-6 medium-6 column' %>
+      <div class="row"></div><div class="large-8 column large-centered">
+        <%= link_to 'Show', project_path(project), class: 'button small large-6 medium-6 column'  %>
+        <%= link_to 'Edit', edit_project_path(project), class: 'button small secondary large-6 medium-6 column' %>
+      </div>
     </li>
   <% end %>
   </ul>
