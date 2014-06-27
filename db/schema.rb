@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140627204716) do
+ActiveRecord::Schema.define(version: 20140627205223) do
 
   create_table "delayed_jobs", force: true do |t|
     t.datetime "created_at"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20140627204716) do
     t.datetime "start_time"
     t.datetime "end_time"
     t.string   "image_url"
+    t.string   "artist_name"
   end
 
   add_index "locations", ["project_id"], name: "index_locations_on_project_id"

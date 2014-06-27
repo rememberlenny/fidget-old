@@ -31,6 +31,9 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
+    @user     = current_user
+    @project  = @user.projects.find(params[:project_id])
+    redirect_to @project
     if params[:search].present?
       @locations = Location.near(params[:search], 50, :order => "distance")
     else
@@ -119,6 +122,6 @@ class LocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def location_params
-      params.require(:location).permit(:image_url, :address, :latitude, :longitude, :start_time, :end_time)
+      params.require(:location).permit(:image_url, :artist_name, :address, :latitude, :longitude, :start_time, :end_time)
     end
 end

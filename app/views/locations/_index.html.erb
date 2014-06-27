@@ -11,6 +11,7 @@
   <thead>
     <tr>
       <th>Id</th>
+      <th>Name</th>
       <th>Image</th>
       <th>Address</th>
       <th>Latitude</th>
@@ -28,6 +29,7 @@
     <% @locations.each do |location| %>
       <tr>
         <td><%= location.id %></td>
+        <td><%= location.artist_name %></td>
         <td><%= location.image_url %></td>
         <td><%= location.address %></td>
         <td><%= location.latitude %></td>
