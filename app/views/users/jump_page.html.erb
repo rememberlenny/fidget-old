@@ -5,7 +5,9 @@
   <ul class="large-block-grid-2 medium-block-grid-2">
   <% @projects.each do |project| %>
     <li class="pos-relate hero-grid-item">
-      <%= image_tag 'momuntain-lg.jpg' %>
+      <%= link_to project_path(project) do %>
+        <%= image_tag 'momuntain-lg.jpg' %>
+      <% end %>
       <div class="row feat-cent large-12 medium-12 full-width">
         <%= link_to project_path(project) do %>
           <h2  class="text-center">
@@ -13,7 +15,7 @@
           </h2>
         <% end %>
 
-        <div class="large-8 column large-centered">
+        <div class="large-6 column large-centered">
           <%= link_to 'Show', project_path(project), class: 'button small large-6 medium-6 column'  %>
           <%= link_to 'Edit', edit_project_path(project), class: 'button small secondary large-6 medium-6 column' %>
         </div>
