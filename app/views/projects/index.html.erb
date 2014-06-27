@@ -6,6 +6,7 @@
     <thead>
       <tr>
         <th>Name</th>
+        <th>Feature Image</th>
         <th></th>
         <th></th>
         <th></th>
@@ -16,6 +17,7 @@
       <% @projects.each do |project| %>
         <tr>
           <td><%= project.name %></td>
+          <td><%= project.featured_image %></td>
           <td><%= link_to 'Show', project_path(project)  %></td>
           <td><%= link_to 'Edit', edit_project_path(project) %></td>
           <td><%= link_to 'Destroy', [project], data: { confirm: 'Are you sure?' }, method: :delete %></td>
