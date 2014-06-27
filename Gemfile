@@ -13,6 +13,7 @@ group :assets do
   gem 'jquery-fileupload-rails'
 end
 
+gem "d3-rails"
 gem 'geocoder'
 gem 'iconv', '~> 1.0.3'
 
