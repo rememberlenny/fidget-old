@@ -6,7 +6,11 @@
   <% @projects.each do |project| %>
     <li class="pos-relate hero-grid-item">
       <%= link_to project_path(project) do %>
-        <%= image_tag 'momuntain-lg.jpg' %>
+        <% if project.featured_image != nil %>
+          <%= image_tag project.featured_image %>
+        <% else %>
+          <%= image_tag 'momuntain-lg.jpg' %>
+        <% end %>
       <% end %>
       <div class="row feat-cent large-12 medium-12 full-width">
         <%= link_to project_path(project) do %>
